@@ -19,22 +19,31 @@
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Enhancing Accelerometer-based Activity Recognition}
+% (feature abused for this document to repeat the title also on left hand pages)
+\authorrunning{Enhancing Accelerometer-based Activity Recognition}
 
 % the name(s) of the author(s) follow(s) next
-\author{Tobias Grosse-Puppendahl\inst{1} \and Eugen Berlin\inst{2} \and Marko Borazio\inst{2} }
-%
-\authorrunning{Enhancing Accelerometer-based Activity Recognition}
-% (feature abused for this document to repeat the title also on left hand pages)
+% \author{Tobias Grosse-Puppendahl\inst{1} \and Eugen Berlin\inst{2} \and Marko Borazio\inst{2} }
+\author{Author 1 \and Author 2 \and Author 3 }
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
+% \institute{
+% 	Fraunhofer IGD, Fraunhoferstr. 5, 64283 Darmstadt, Germany\\
+% 	\email{tobias.grosse-puppendahl@igd.fraunhofer.de}
+% 	\and
+% 	Technische Universit\"at Darmstadt, Hochschulstr. 10, 64289 Darmstadt, Germany\\
+% 	\email{\{berlin,borazio\}@ess.tu-darmstadt.de}
+% }
+
 \institute{
-	Fraunhofer IGD, Fraunhoferstr. 5, 64283 Darmstadt, Germany\\
-	\email{tobias.grosse-puppendahl@igd.fraunhofer.de}
+	Anonymized for review \\
+	\email{ananymous@insitution.edu}
 	\and
-	Technische Universit\"at Darmstadt, Hochschulstr. 10, 64289 Darmstadt, Germany\\
-	\email{\{berlin,borazio\}@ess.tu-darmstadt.de}
+	Anonymized for review \\
+	\email{ananymous@insitution.edu}
 }
+
 
 % \toctitle{Enhancing Accelerometer-based Activity Recognition with Capacitive Proximity Sensing}
 % \tocauthor{Eugen Berlin, Marko Borazio, Tobias Grosse-Puppendahl}
@@ -46,7 +55,7 @@ Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt i
 \end{abstract}
 
 \section{Introduction}
-Current wearable activity recognition systems are able to unobtrusively capture and recognize a person's activities throughout the whole day. These systems often rely on inertial sensor data that is captured by wearable sensors attached to the body to identify the activities performed. However, it is a great challenge to identify fine-grained activities just by using this single modality. In this paper, we use an accelerometer-based activity recognition system, the wrist-worn activity logger called HedgeHog\footnote{\url{http://www.ess.tu-darmstadt.de/hedgehog}} and investigate the possibility of integrating a capacitive proximity sensor unobtrusively into the wristband to obtain higher recognition rates for several activities in daily life.
+Current wearable activity recognition systems are able to unobtrusively capture and recognize a person's activities throughout the whole day. These systems often rely on inertial sensor data that is captured by wearable sensors attached to the body to identify the activities performed. However, it is a great challenge to identify fine-grained activities just by using this single modality. In this paper, we have obtained and use a wrist-worn activity data logger\footnote{HedgeHog Activity Logger -- \url{http://www.ess.tu-darmstadt.de/hedgehog}} and investigate the possibility of integrating a capacitive proximity sensor unobtrusively into the wristband to obtain higher recognition rates for several activities in daily life.
 
 Capacitive proximity sensors can indirectly measure the distance and nature of a grounded object within reach. This means that the measurement result depends on the object's distance, its size and the material it is made of. A wristband worn capacitive proximity sensor requires a shield that eliminates the influence of the grounded arm directly underneath the sensor. Using this setup, we can detect the proximity to a grounded object in the environments for distances up to 20 cm. Especially for mobile devices, it is required that the sensor only draws a very small amount of power. Thus, other proximity sensing input modalities like ultrasound or optical measurements are not applicable for this type of mobile application.
 
@@ -58,22 +67,29 @@ There are several intuitive examples for which a combination of accelerometer-ba
 
 [MB; EB: Related Work activity recognition]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The field of activity recognition relying on wearable sensors mostly mostly considers inertial data from the participants body to infer performed activities, such as in the works of [bla,foo]. The acceleration data is often augmented with data from sensors such as gyroscopes, magnetometers, ambient light or temperature, aiming at extracting more motion and environmental context of the user. [references?!]
 
-Berlin et al. \cite{berlin_laerhoven_tei_2010} have augmented an accelerometer based sensor node with an RFID bracelet to be able to detect objects a human is interacting with. Thus, activities can use this additional modality 
+The works of \cite{intel_bracelet} and ... show that detecting objects the user touches or uses throughout the day can be very helpful for the activity recognition, including activities of daily living (maja(?)), maintenance tasks (?), gardening activities, etc. For example, Berlin et al. \cite{berlin_laerhoven_tei_2010} have augmented a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 In the field of capacitive proximity sensing, three different measurement modes shown in Figure \ref{fig:modes} were identified by Smith et al. \cite{Smith1999}: transmit mode, shunt mode and loading mode. Transmit mode is based on a varying electric potential coupled to an object that can be measured by a capacitive proximity sensor next to that object. Shunt mode applies two electrodes, a transmit and a receive electrode, that can measure capacitance changes produced by objects disturbing the electric field between the two electrodes. In loading mode, a single electrode builds up an electric field to any grounded object in the environment. By measuring the capacitance, conclusions can be made upon the proximity and nature of an object. In our work we apply loading mode since it requires only a single electrode that can be integrated invisibly into the wristband.
 
-A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in [wimmer2006] who presented a toolkit for capacitive proximity sensing.
+A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{wimmer2006} who presented a toolkit for capacitive proximity sensing.
 
 In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. For example, Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense and classify human postures \cite{Wimmer,Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
 
+
 \section{Hardware}
-\subsection{HedgeHog}
+This section presents the two components of the required hardware, the wrist-worn activity data logger tailored to capture acceleration data, and the capacitive proximity sensor used for distance measurements.
+
+\subsection{Activity Data Logger}
 The HedgeHog sensor is a custom designed and built wearable data logger aiming at long-term deployments in activity recognition scenarios. Due to its small form-factor (30x25x20mm) and weight, this sensor, being worn at the wrist, is an unobtrusive way to record relevant motion data.
 
-The HedgeHog sensor is built around the low-power Microchip microcontroller (PIC18F46J50) featuring an accelerometer sensor (ADXL345) to capture human motion, light and ambient temperature sensors and a microSD flash card for locally storing the sensor data. The sensor is powered by a $200mAh$ lithium polymer battery, which allows for two weeks of continuous recording on a single battery charge. A plastic case is used to nicely package and protect the sensor to be worn at the wrist (as shown in Fig. \ref{fig:sensornode}).
+The sensor node itself is built around the low-power Microchip microcontroller (PIC18F46J50) featuring an accelerometer sensor (ADXL345) to capture human motion, light and ambient temperature sensors and a microSD flash card for locally storing the sensor data. The sensor is powered by a $200mAh$ lithium polymer battery, which allows for two weeks of continuous recording on a single battery charge. A USB port is used to configure the sensor (e.g. setting the sensitivity of the accelerometer), to access the stored sensor data, and to recharge the battery. A plastic case nicely packages and protects the sensor to be worn at the wrist (as shown in Fig. \ref{fig:sensornode}).
 
 \begin{figure}
 	\centering
@@ -84,7 +100,7 @@ The HedgeHog sensor is built around the low-power Microchip microcontroller (PIC
 
 The 3D accelerometer sensor is being sampled at $100Hz$, resulting in 10ms equidistant measurements. For efficiency reasons, the sensor data is run-length encoded before being stored locally to the microSD card.
 
-The HedgeHog can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor, which is described in detail in the next section.
+Since the main microcontroller on the sensor node has unoccupied pins, it can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor, which is described in detail in the next section.
 
 
 \subsection{Capacitive Proximity Sensor}
@@ -96,21 +112,20 @@ The capacitive proximity sensor for the wristband performs measurements in loadi
 
 The proximity sensor board generates a clock signal with varying frequency depending on the proximity to body parts, objects and their characteristics. The HedgeHog therefore needs to measure the incoming frequency, which is implemented by counting the signal's edges over the gate time of approximately 9.5ms.
 
+\begin{verbatim}
 pseudocode:
-    sample the accelerometer sensor
-
-start frequency counter
-
-go to sleep for 9.5 ms
-
-wake-up (timer interrupt)
-
-stop frequency counter
-
-read frequency count
+  sample the accelerometer sensor
+  start frequency counter
+  go to sleep for 9.5 ms
+  wake-up (timer interrupt)
+  stop frequency counter
+  read frequency count
+\end{verbatim}
 
 
 \section{Experiment}
+
+This section presents the experimental setup including the activities and the participants, as well as the findings that were obtained during the evaluation.
 
 \subsection{Setup and Scenario}
 
@@ -120,20 +135,17 @@ The recorded test set contains the following activities: opening door, sitting o
 
 \begin{figure}
 	\centering
-		\includegraphics[trim=2cm 0.5cm 2cm 0.5cm,width=1.00\textwidth]{Images/drinking.pdf}
-	\caption{Drinking activity}
+		\includegraphics[trim=1.9cm 0.5cm 1.8cm 0.5cm,clip,width=\textwidth]{Images/drinking.pdf}
+	\caption{An example of the ``drinking'' activity with raw 3D acceleration data (lower plot) and proximity sensor data (upper plot). The participant took five nips from the glass, while leaving the hands lying on the table in between. These motions can be easily detected in the acceleration as well as proximity data.}
 	\label{fig:drinking}
 \end{figure}
 
 \begin{figure}
 	\centering
-		\includegraphics[trim=2cm 0.5cm 2cm 0.5cm,width=1.00\textwidth]{Images/making-bread.pdf}
-	\caption{Preparing bread}
+		\includegraphics[trim=1.9cm 0.5cm 1.8cm 0.5cm,clip,width=\textwidth]{Images/making-bread.pdf}
+	\caption{An example of the ``preparing bread'' activity, where the participants had to put marmalade on a toast. Note, that the acceleration data does not seem to have any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in ``unmittelbarer nähe''.}
 	\label{fig:making-bread}
 \end{figure}
-
-
-
 
 [EB: Hier plot von drinking und grasping into locker]
 
