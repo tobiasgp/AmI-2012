@@ -75,12 +75,19 @@ The works of \cite{intel_bracelet} and ... show that detecting objects the user 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{figure}[htbp]
+	\centering
+% 		\includegraphics[width=1.00\textwidth]{Images/modes.png}
+	\caption{Capacitive proximity sensing modes \cite{Smith1996}}
+	\label{fig:modes}
+\end{figure}
+
 
 In the field of capacitive proximity sensing, three different measurement modes shown in Figure \ref{fig:modes} were identified by Smith et al. \cite{Smith1999}: transmit mode, shunt mode and loading mode. Transmit mode is based on a varying electric potential coupled to an object that can be measured by a capacitive proximity sensor next to that object. Shunt mode applies two electrodes, a transmit and a receive electrode, that can measure capacitance changes produced by objects disturbing the electric field between the two electrodes. In loading mode, a single electrode builds up an electric field to any grounded object in the environment. By measuring the capacitance, conclusions can be made upon the proximity and nature of an object. In our work we apply loading mode since it requires only a single electrode that can be integrated invisibly into the wristband.
 
 A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{wimmer2006} who presented a toolkit for capacitive proximity sensing.
 
-In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. For example, Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense and classify human postures \cite{Wimmer,Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
+In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. For example, Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
 
 
 \section{Hardware}
@@ -98,31 +105,24 @@ The sensor node itself is built around the low-power Microchip microcontroller (
 	\label{fig:sensornode}
 \end{figure}
 
-The 3D accelerometer sensor is being sampled at $100Hz$, resulting in 10ms equidistant measurements. For efficiency reasons, the sensor data is run-length encoded before being stored locally to the microSD card.
 
-Since the main microcontroller on the sensor node has unoccupied pins, it can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor, which is described in detail in the next section.
-
+The 3D accelerometer sensor is being sampled at $100Hz$, resulting in 10ms equidistant measurements. For efficiency reasons, the sensor data is run-length encoded before being stored locally to the microSD card. The HedgeHog can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor, which is described in detail in the next section.
 
 \subsection{Capacitive Proximity Sensor}
 power drain: 1mA when active
 image : photo
 image : board layout and schematics !
 
-The capacitive proximity sensor for the wristband performs measurements in loading mode. The sensing circuit schematic is shown in Figure \ref{}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is neglectable. Using this shielding method, the measured capacitance will only be slightly affected by the grounded underlying arm.
+The capacitive proximity sensor for the wristband performs measurements in loading mode. The sensing circuit schematic is shown in Figure \ref{}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the wristband electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method, the measured capacitance will only be slightly affected by the grounded underlying arm.
 
-The proximity sensor board generates a clock signal with varying frequency depending on the proximity to body parts, objects and their characteristics. The HedgeHog therefore needs to measure the incoming frequency, which is implemented by counting the signal's edges over the gate time of approximately 9.5ms.
+The proximity sensor board generates a clock signal with varying frequency depending on the charge and discharge cycles. The HedgeHog measures the resulting capacitance by counting the signal's edges over a gate time of approximately 9.5ms.
 
-\begin{verbatim}
-pseudocode:
-  sample the accelerometer sensor
-  start frequency counter
-  go to sleep for 9.5 ms
-  wake-up (timer interrupt)
-  stop frequency counter
-  read frequency count
-\end{verbatim}
-
-
+\begin{figure}[htbp]
+	\centering
+% 		\includegraphics[trim=1cm 1cm 1cm 1cm,clip,width=\textwidth]{Images/pseudocode.pdf}
+	\caption{Measurement procedure}
+	\label{fig:pseudocode}
+\end{figure}
 \section{Experiment}
 
 This section presents the experimental setup including the activities and the participants, as well as the findings that were obtained during the evaluation.
@@ -131,7 +131,7 @@ This section presents the experimental setup including the activities and the pa
 
 The experiment setup aims to depict a typical scenario in daily life. Especially in the field of Ambient Assisted Living (AAL), it is desired to monitor activities like drinking, preparing lunch and sleeping. A fine-grained monitoring of such activities may help elderly or people suffering from mental diseases to maintain a healthy day/night rhythm and take action if irregularities occur.
 
-The recorded test set contains the following activities: opening door, sitting on a couch, lying on a couch, grasping into a locker, putting something from a shelf, sitting at the table, preparing a bread with marmalade, eating the bread, pouring water, drinking the water and sleeping. Some of those activities are very hard to recognize without context information, just using wrist-worn accelerometer data. For example, sitting at the table and sitting on a couch are very similar activities. The data of a capacitive proximity sensor can extend this data basis by providing that is related to the material an object is made of.
+The recorded test set contains the following activities: opening door, sitting on a couch, lying on a couch, grasping into a locker, putting something from a shelf, sitting at the table, preparing a bread with marmalade, eating the bread, pouring water, drinking the water and sleeping. Some of those activities are very hard to recognize without any further contextual information, when the data is limited to a single modality like a 3D accelerometer. For example, sitting at the table and sitting on a couch are very similar activities. The data of a capacitive proximity sensor can extend this data basis by providing that is related to the material an object is made of.
 
 \begin{figure}
 	\centering
@@ -143,7 +143,7 @@ The recorded test set contains the following activities: opening door, sitting o
 \begin{figure}
 	\centering
 		\includegraphics[trim=1.9cm 0.5cm 1.8cm 0.5cm,clip,width=\textwidth]{Images/making-bread.pdf}
-	\caption{An example of the ``preparing bread'' activity, where the participants had to put marmalade on a toast. Note, that the acceleration data does not seem to have any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in ``unmittelbarer nähe''.}
+	\caption{An example of the ``preparing bread'' activity, where the participants had to put marmalade on a toast. Note, that the acceleration data does not seem to have any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in immediate distance.}
 	\label{fig:making-bread}
 \end{figure}
 
