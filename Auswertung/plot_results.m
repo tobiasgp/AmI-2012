@@ -1,7 +1,7 @@
 %recordings = [csvread('feugen.csv')];
 %classes = [csvread('ae.csv')];
-recordings = nagi;
-classes = ann_nagi;
+recordings = eugen;
+classes = ann_eugen;
 
 sum_acc = sum(recordings(:,2));
 num_recordings = size(recordings);
@@ -29,16 +29,16 @@ time = time';
 %stop = 62320;
 
 % making bread
-%start = 39837;
-%stop = 42168;
+start = 39837;
+stop = 42168;
 
 % drink
-%start = 50550;
-%stop = 60890;
+start = 50550;
+stop = 60890;
 
 % all
-start = + 10000;
-stop = sum_acc - 10000;
+%start = + 10000;
+%stop = sum_acc - 10000;
 
 delta = stop - start;
 window_size = 20;
@@ -50,11 +50,11 @@ acceleration_z = recordings(:,5);
 cap = recordings(:,6);
 
 % smooth all recorded data by average filter
-average_kernel = ones(100, 1) * 0.0125;
-%cap = conv(cap, average_kernel, 'same');
-%acceleration_x = conv(acceleration_x, average_kernel, 'same');
-%acceleration_y = conv(acceleration_y, average_kernel, 'same');
-%acceleration_z = conv(acceleration_z, average_kernel, 'same');
+average_kernel = ones(10, 1) * 0.1;
+cap = conv(cap, average_kernel, 'same');
+acceleration_x = conv(acceleration_x, average_kernel, 'same');
+acceleration_y = conv(acceleration_y, average_kernel, 'same');
+acceleration_z = conv(acceleration_z, average_kernel, 'same');
 
 % resulting values
 res_cap = cap(start:stop);

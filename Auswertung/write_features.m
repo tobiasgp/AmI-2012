@@ -3,12 +3,17 @@ features_file_with_cap = 'features_with_cap.arff';
 
 %classes = [csvread('ae.csv'); csvread('am.csv')];
 %recordings = [csvread('feugen.csv'); csvread('fmarko.csv')];
-classes = ann_enzo;
-recordings = enzo;
+classes = ann_marko;
+recordings = marko;
 
 window_size = 100;
-window_overlap = 50;
+window_overlap = window_size/2;
 number_features = 8;
+
+recordings(:, 3) = smooth(recordings(:, 3),10);
+recordings(:, 4) = smooth(recordings(:, 4),10);
+recordings(:, 5) = smooth(recordings(:, 5),10);
+recordings(:, 6) = smooth(recordings(:, 6),10);
 
 number_recordings = size(recordings);
 number_recordings = number_recordings(1);
@@ -22,7 +27,7 @@ while i < (number_recordings)
     current_class = classes(i);
     extract_features = true;
    
-    % determine window size by acc
+    % determine window size by counter
     end_of_window = i;
     sum_acc = 0;
     while sum_acc < window_size
