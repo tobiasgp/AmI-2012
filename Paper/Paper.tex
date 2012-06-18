@@ -38,10 +38,10 @@
 
 \institute{
 	Anonymized for review \\
-	\email{ananymous@insitution.edu}
+	\email{anonymous@insitution.edu}
 	\and
 	Anonymized for review \\
-	\email{ananymous@insitution.edu}
+	\email{anonymous@insitution.edu}
 }
 
 
@@ -77,15 +77,15 @@ The works of \cite{intel_bracelet} and ... show that detecting objects the user 
 
 \begin{figure}[htbp]
 	\centering
-% 		\includegraphics[width=1.00\textwidth]{Images/modes.png}
-	\caption{Capacitive proximity sensing modes \cite{Smith1996}}
+		\includegraphics[width=1.00\textwidth]{Images/modes.pdf}
+	\caption{Three different capacitive proximity sensing modes can be distinguished. The sensing electrodes build up an electric field to objects in the environment, illustrated with a cloud. \cite{Smith1996}}
 	\label{fig:modes}
 \end{figure}
 
 
 In the field of capacitive proximity sensing, three different measurement modes shown in Figure \ref{fig:modes} were identified by Smith et al. \cite{Smith1999}: transmit mode, shunt mode and loading mode. Transmit mode is based on a varying electric potential coupled to an object that can be measured by a capacitive proximity sensor next to that object. Shunt mode applies two electrodes, a transmit and a receive electrode, that can measure capacitance changes produced by objects disturbing the electric field between the two electrodes. In loading mode, a single electrode builds up an electric field to any grounded object in the environment. By measuring the capacitance, conclusions can be made upon the proximity and nature of an object. In our work we apply loading mode since it requires only a single electrode that can be integrated invisibly into the wristband.
 
-A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{wimmer2006} who presented a toolkit for capacitive proximity sensing.
+A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{Wimmer2007} who presented a toolkit for capacitive proximity sensing.
 
 In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. For example, Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
 
@@ -109,20 +109,29 @@ The sensor node itself is built around the low-power Microchip microcontroller (
 The 3D accelerometer sensor is being sampled at $100Hz$, resulting in 10ms equidistant measurements. For efficiency reasons, the sensor data is run-length encoded before being stored locally to the microSD card. The HedgeHog can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor, which is described in detail in the next section.
 
 \subsection{Capacitive Proximity Sensor}
-power drain: 1mA when active
+
+The capacitive proximity sensor performs measurements in loading mode. Two electrodes are integrated into the wristband, one sensing electrode and one shielding electrode that aims to eliminate the influence of the arm that is a very proximate grounded object to the sensing electrode. The sensor draws a supply current of 1 mA at 3.3 V when active. This low power consumption qualifies the sensor for wearable proximity sensing applications. 
+
 image : photo
-image : board layout and schematics !
-
-The capacitive proximity sensor for the wristband performs measurements in loading mode. The sensing circuit schematic is shown in Figure \ref{}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the wristband electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method, the measured capacitance will only be slightly affected by the grounded underlying arm.
-
-The proximity sensor board generates a clock signal with varying frequency depending on the charge and discharge cycles. The HedgeHog measures the resulting capacitance by counting the signal's edges over a gate time of approximately 9.5ms.
 
 \begin{figure}[htbp]
 	\centering
-% 		\includegraphics[trim=1cm 1cm 1cm 1cm,clip,width=\textwidth]{Images/pseudocode.pdf}
+		\includegraphics[width=1.00\textwidth]{Images/schematic.pdf}
+	\caption{The sensing circuit is based on a timer with an operational amplifier that acts as a voltage follower.}
+	\label{fig:schematic}
+\end{figure}
+
+The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly affected by the grounded underlying arm.
+
+\begin{figure}[htbp]
+	\centering
+ 		\includegraphics[trim=1cm 1cm 1cm 1cm,clip,width=\textwidth]{Images/pseudocode.pdf}
 	\caption{Measurement procedure}
 	\label{fig:pseudocode}
 \end{figure}
+
+Figure \ref{fig:pseudocode} illustrates the operations required for a measurement cycle. The proximity sensor board generates a clock signal with varying frequency depending on the charge and discharge cycles. The HedgeHog measures the resulting capacitance by counting the signal's edges over a gate time of approximately 9.5ms. During that counting phase, the HedgeHog is sent to sleep in order to reduce power consumption. In the following, the HedgeHog applies run-length encoding on the measured data to reduce overhead and periodically logs the data to the integrated SD card.
+
 \section{Experiment}
 
 This section presents the experimental setup including the activities and the participants, as well as the findings that were obtained during the evaluation.
@@ -147,9 +156,7 @@ The recorded test set contains the following activities: opening door, sitting o
 	\label{fig:making-bread}
 \end{figure}
 
-[EB: Hier plot von drinking und grasping into locker]
-
-Figure \ref{fig:drinking} depicts the data that was recorded for the activity drinking water. The accelerometer data shows that there periodic up- and down-movements while the capacitive proximity sensor delivers data that is associated to the proximity of the table. Figure \ref{fig:opendoor} illustrates a grasp into a locker while preparing lunch. It is obvious that the locker's bottom surface that is located very closely to the wristband has an influence on the proximity sensor.
+Figure \ref{fig:drinking} depicts the data that was recorded for the activity drinking water. The accelerometer data shows that there periodic up- and down-movements while the capacitive proximity sensor delivers data that is associated to the proximity of the table. Figure \ref{fig:making-bread} illustrates the preperation of a bread with marmelade while preparing lunch. It is obvious that the capacitive proximity sensor's data provides valuable information about the distance of the wristband to the table. 
 
 In order to evaluate if capacitive proximity sensors in wrist-bands can enhance the performance of activity recognition, we have conducted an evaluation with ten test persons. All test persons received a plot with the activities they were supposed to perform. After manual labeling, we used this test-set as ground truth and performed a cross-validation on an support-vector machine (SVM) classifier once with and once without including the data of the capacitive proximity sensor into the feature set.
 
@@ -163,9 +170,14 @@ The classifier was trained with various features that were extracted from window
 
 \section{Conclusion and Outlook}
 
+We have shown that current wearable inertial sensing devices for activity recognition can be significantly enhanced by integrating a capacitive proximity sensor into the wristband. Regarding the classication accuracy, we obtained an overall increase in correctly classified instances of TODO percent. Some classes, for instance ``preparing bread'' and ``drinking'', could benefit very much from proximity-related sensor data. For such classes the classication performance could be boosted by up to TODO percent. 
+
+The classification results could be improved by the usage of more than one sensing electrode in the wristband. For example the wristband could integrate four electrodes that are placed on each side of the arm. However, this will lead to smaller electrode surfaces that lead to a decrease of sensing distance. We think that these considerations are an important subject of future work. The sensor's power consumption can be decreased by shorter measurement windows and the choice of more energy efficient hardware components. Measuring pulse width lengths instead of counting the rising edges of the sensor's signal may reduce the required time needed for a measurement.
+
+Capacitive proximity sensors represent a suitable new input modality for future activity recognition systems. The low power consumption as well as the invisible integration of a sensor into the wristband meets an essential requirement of wearable applications. Especially in AAL environments, these systems can help monitoring the course of chronic diseases by recognizing activities of daily life. This may improve the quality of life of persons affected and their caregivers. 
+
 \section*{Acknowledgments}
-% We would like to thank the students of TU Darmstadt and the employees of Fraunhofer IGD that lent us their sitting and lying abilities for the evaluation. 
-We would like to thank our evaluation participants from the TU Darmstadt and the Fraunhofer IGD.
+We would like to thank our evaluation participants from TU Darmstadt and Fraunhofer IGD.
 
 \newpage
 
