@@ -156,7 +156,7 @@ The recorded test set contains the following activities: opening door, sitting o
 	\label{fig:making-bread}
 \end{figure}
 
-Figure \ref{fig:drinking} depicts the data that was recorded for the activity drinking water. The accelerometer data shows that there periodic up- and down-movements while the capacitive proximity sensor delivers data that is associated to the proximity of the table. Figure \ref{fig:making-bread} illustrates the preperation of a bread with marmelade while preparing lunch. It is obvious that the capacitive proximity sensor's data provides valuable information about the distance of the wristband to the table. 
+Figure \ref{fig:drinking} depicts the data that was recorded for the activity drinking water. The accelerometer data shows that there periodic up- and down-movements while the capacitive proximity sensor delivers data that is associated to the proximity of the table. Figure \ref{fig:making-bread} illustrates the preparation of a bread with marmalade while preparing lunch. It is obvious that the capacitive proximity sensor's data provides valuable information about the distance of the wristband to the table. 
 
 In order to evaluate if capacitive proximity sensors in wrist-bands can enhance the performance of activity recognition, we have conducted an evaluation with ten test persons. All test persons received a plot with the activities they were supposed to perform. After manual labeling, we used this test-set as ground truth and performed a cross-validation on an support-vector machine (SVM) classifier once with and once without including the data of the capacitive proximity sensor into the feature set.
 
@@ -170,7 +170,7 @@ The classifier was trained with various features that were extracted from window
 
 \section{Conclusion and Outlook}
 
-We have shown that current wearable inertial sensing devices for activity recognition can be significantly enhanced by integrating a capacitive proximity sensor into the wristband. Regarding the classication accuracy, we obtained an overall increase in correctly classified instances of TODO percent. Some classes, for instance ``preparing bread'' and ``drinking'', could benefit very much from proximity-related sensor data. For such classes the classication performance could be boosted by up to TODO percent. 
+We have shown that current wearable inertial sensing devices for activity recognition can be significantly enhanced by integrating a capacitive proximity sensor into the wristband. Regarding the classification accuracy, we obtained an overall increase in correctly classified instances of TODO percent. Some classes, for instance ``preparing bread'' and ``drinking'', could benefit very much from proximity-related sensor data. For such classes the classification performance could be boosted by up to TODO percent. 
 
 The classification results could be improved by the usage of more than one sensing electrode in the wristband. For example the wristband could integrate four electrodes that are placed on each side of the arm. However, this will lead to smaller electrode surfaces that lead to a decrease of sensing distance. We think that these considerations are an important subject of future work. The sensor's power consumption can be decreased by shorter measurement windows and the choice of more energy efficient hardware components. Measuring pulse width lengths instead of counting the rising edges of the sensor's signal may reduce the required time needed for a measurement.
 
