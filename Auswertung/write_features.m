@@ -3,8 +3,8 @@ features_file_with_cap = 'features_with_cap.arff';
 
 %classes = [csvread('ae.csv'); csvread('am.csv')];
 %recordings = [csvread('feugen.csv'); csvread('fmarko.csv')];
-classes = ann_marko;
-recordings = marko;
+classes = ann_eugen;
+recordings = eugen;
 
 window_size = 100;
 window_overlap = window_size/2;
@@ -61,7 +61,7 @@ while i < (number_recordings)
     end
     
     % if the window is ok, do the feature extraction
-    if extract_features == true && current_class ~= 0
+    if extract_features == true
         accel_1 = recordings(i:end_of_window, 3);
         accel_2 = recordings(i:end_of_window, 4);
         accel_3 = recordings(i:end_of_window, 5);
@@ -114,7 +114,7 @@ fprintf(fileID, '@ATTRIBUTE mean_accel_3 NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE var_accel_1 NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE var_accel_2 NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE var_accel_3 NUMERIC\r\n');
-fprintf(fileID, '@ATTRIBUTE class {class1,class2,class3,class4,class5,class6,class7,class8,class9}\r\n');
+fprintf(fileID, '@ATTRIBUTE class {class0,class1,class2,class3,class4,class5,class6,class7,class8,class9}\r\n');
 fprintf(fileID, '\r\n');
 
 fprintf(fileID, '@DATA\r\n');
@@ -141,7 +141,7 @@ fprintf(fileID, '@ATTRIBUTE var_accel_2 NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE var_accel_3 NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE mean_cap NUMERIC\r\n');
 fprintf(fileID, '@ATTRIBUTE var_cap NUMERIC\r\n');
-fprintf(fileID, '@ATTRIBUTE class {class1,class2,class3,class4,class5,class6,class7,class8,class9}\r\n');
+fprintf(fileID, '@ATTRIBUTE class {class0,class1,class2,class3,class4,class5,class6,class7,class8,class9}\r\n');
 fprintf(fileID, '\r\n');
 
 fprintf(fileID, '@DATA\r\n');
