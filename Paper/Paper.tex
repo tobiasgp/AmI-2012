@@ -63,13 +63,16 @@ There are several intuitive examples for which a combination of accelerometer-ba
 
 \section{Related Work}
 
-[MB; EB: Related Work activity recognition]
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The field of activity recognition relying on wearable sensors mostly mostly considers inertial data from the participants body to infer performed activities, such as in the works of [bla,foo]. The acceleration data is often augmented with data from sensors such as gyroscopes, magnetometers, ambient light or temperature, aiming at extracting more motion and environmental context of the user. [references?!]
+The field of activity recognition relying on wearable sensors mostly considers inertial data from the participants body to infer performed activities, such as in the works of \cite{Ravi2005,Bao2004,Srinivasan2010,Amft2005}. The acceleration data is often augmented with data from sensors such as gyroscopes \cite{Holleczek_2010}, magnetometers \cite{Altun_2010}, ambient light \cite{Borazio2012} or ambient and skin temperature \cite{Krause_2003}, aiming at extracting more motion and environmental context of the user. Researchers in \cite{wyss2010recognition}, for example, use heart rate information additionally to the accelerometer to detect military related activities like lifting and lowering loads or even digging. In \cite{Ward_2006}, workshop assembly activities were detected by augmenting acceleration sensors with microphones.
 
-The works of \cite{intel_bracelet} and ... show that detecting objects the user touches or uses throughout the day can be very helpful for the activity recognition, including activities of daily living (maja(?)), maintenance tasks (?), gardening activities, etc. For example, Berlin et al. \cite{berlin_laerhoven_tei_2010} have augmented a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with.
+The works of \cite{Fishkin_2005} and \cite{patterson2005fga} show that detecting objects the user touches or uses can be very helpful for activity recognition, including activities of daily living \cite{phealth:maja} and \cite{Philipose_2004}, activity tracking in car manufacturing \cite{Stiefmeier08}, etc. Berlin et al. \cite{berlin_laerhoven_tei_2010} have augmented a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with, aiming both at household as well as gardening activities.
+
+
+% physical activities with accelerometers detected via motifs \cite{minnen_2006}
+
+% detection of eating and drinking activities from acceleration sensors \cite{Amft2005}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -98,8 +101,8 @@ The sensor node itself is built around the low-power Microchip microcontroller (
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{Images/hardware_sensor.jpg}
-	\caption{The inertial data logger featuring a low-power microcontroller, a 3 axis accelerometer, a microSD flash card for storing the sensor data and a USB connector for accessing the stored data (on the left) is being powered by a small lithium polymer battery and is packaged into a plastic case to be worn at the wrist (a version with a OLED display on the right).}
+	\includegraphics[width=\textwidth]{Images/hardware_sensor_2.jpg}
+	\caption{The inertial data logger featuring a low-power microcontroller, a 3 axis accelerometer, a microSD flash card for storing the sensor data and a USB connector for accessing the stored data (on the right) is being powered by a small lithium polymer battery and is packaged into a plastic case to be worn at the wrist (a version with a OLED display on the left).}
 	\label{fig:sensornode}
 \end{figure}
 
