@@ -1,0 +1,2218 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     capsense
+Instances:    9711
+Attributes:   16
+              min_accel_1
+              min_accel_2
+              min_accel_3
+              max_accel_1
+              max_accel_2
+              max_accel_3
+              mean_accel_1
+              mean_accel_2
+              mean_accel_3
+              median_accel_1
+              median_accel_2
+              median_accel_3
+              var_accel_1
+              var_accel_2
+              var_accel_3
+              class
+Test mode:4-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+var_accel_2 <= 0.2564
+|   median_accel_2 <= 121.5
+|   |   max_accel_1 <= 140
+|   |   |   min_accel_2 <= 115
+|   |   |   |   mean_accel_2 <= 107.7
+|   |   |   |   |   min_accel_2 <= 99
+|   |   |   |   |   |   mean_accel_2 <= 96.07: class6 (37.0)
+|   |   |   |   |   |   mean_accel_2 > 96.07
+|   |   |   |   |   |   |   max_accel_3 <= 130: class7 (15.0)
+|   |   |   |   |   |   |   max_accel_3 > 130: class0 (5.0)
+|   |   |   |   |   min_accel_2 > 99
+|   |   |   |   |   |   var_accel_1 <= 1.0299
+|   |   |   |   |   |   |   min_accel_1 <= 123: class7 (5.0)
+|   |   |   |   |   |   |   min_accel_1 > 123
+|   |   |   |   |   |   |   |   median_accel_2 <= 100.5: class7 (2.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 100.5
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 0.1164: class9 (106.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 0.1164
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 133: class9 (25.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 133
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 122: class9 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 122: class7 (6.0)
+|   |   |   |   |   |   var_accel_1 > 1.0299
+|   |   |   |   |   |   |   min_accel_2 <= 102
+|   |   |   |   |   |   |   |   min_accel_2 <= 100: class7 (5.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 100: class9 (2.0)
+|   |   |   |   |   |   |   min_accel_2 > 102: class7 (13.0)
+|   |   |   |   mean_accel_2 > 107.7
+|   |   |   |   |   min_accel_1 <= 119
+|   |   |   |   |   |   max_accel_2 <= 114
+|   |   |   |   |   |   |   max_accel_1 <= 120: class9 (63.0/1.0)
+|   |   |   |   |   |   |   max_accel_1 > 120
+|   |   |   |   |   |   |   |   median_accel_2 <= 110: class3 (7.0/1.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 110: class9 (6.0)
+|   |   |   |   |   |   max_accel_2 > 114: class3 (39.0/2.0)
+|   |   |   |   |   min_accel_1 > 119
+|   |   |   |   |   |   var_accel_1 <= 1.1379
+|   |   |   |   |   |   |   max_accel_1 <= 126
+|   |   |   |   |   |   |   |   min_accel_2 <= 111
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 124: class3 (37.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 124: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 111: class9 (3.0)
+|   |   |   |   |   |   |   max_accel_1 > 126: class3 (434.0/4.0)
+|   |   |   |   |   |   var_accel_1 > 1.1379
+|   |   |   |   |   |   |   max_accel_3 <= 148
+|   |   |   |   |   |   |   |   var_accel_1 <= 1.5764: class9 (2.0)
+|   |   |   |   |   |   |   |   var_accel_1 > 1.5764: class3 (2.0)
+|   |   |   |   |   |   |   max_accel_3 > 148
+|   |   |   |   |   |   |   |   min_accel_1 <= 123: class3 (2.0)
+|   |   |   |   |   |   |   |   min_accel_1 > 123: class7 (5.0)
+|   |   |   min_accel_2 > 115
+|   |   |   |   max_accel_1 <= 129
+|   |   |   |   |   max_accel_1 <= 124
+|   |   |   |   |   |   min_accel_2 <= 118
+|   |   |   |   |   |   |   mean_accel_2 <= 116.12: class3 (9.0/1.0)
+|   |   |   |   |   |   |   mean_accel_2 > 116.12: class2 (30.0/1.0)
+|   |   |   |   |   |   min_accel_2 > 118: class6 (7.0/1.0)
+|   |   |   |   |   max_accel_1 > 124: class3 (73.0)
+|   |   |   |   max_accel_1 > 129
+|   |   |   |   |   var_accel_2 <= 0.1091: class9 (403.0)
+|   |   |   |   |   var_accel_2 > 0.1091
+|   |   |   |   |   |   min_accel_3 <= 121: class9 (6.0/1.0)
+|   |   |   |   |   |   min_accel_3 > 121: class6 (2.0)
+|   |   max_accel_1 > 140
+|   |   |   max_accel_3 <= 129
+|   |   |   |   min_accel_1 <= 145
+|   |   |   |   |   median_accel_1 <= 139.5: class3 (2.0/1.0)
+|   |   |   |   |   median_accel_1 > 139.5: class7 (30.0)
+|   |   |   |   min_accel_1 > 145
+|   |   |   |   |   median_accel_2 <= 116.5
+|   |   |   |   |   |   mean_accel_2 <= 111.16
+|   |   |   |   |   |   |   max_accel_2 <= 110: class6 (10.0/1.0)
+|   |   |   |   |   |   |   max_accel_2 > 110
+|   |   |   |   |   |   |   |   min_accel_3 <= 119: class2 (14.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 119: class6 (2.0)
+|   |   |   |   |   |   mean_accel_2 > 111.16: class6 (38.0/1.0)
+|   |   |   |   |   median_accel_2 > 116.5
+|   |   |   |   |   |   median_accel_1 <= 159.5
+|   |   |   |   |   |   |   min_accel_2 <= 119: class7 (8.0)
+|   |   |   |   |   |   |   min_accel_2 > 119: class6 (2.0)
+|   |   |   |   |   |   median_accel_1 > 159.5: class4 (3.0)
+|   |   |   max_accel_3 > 129
+|   |   |   |   max_accel_3 <= 146
+|   |   |   |   |   var_accel_3 <= 0.3876
+|   |   |   |   |   |   min_accel_2 <= 115
+|   |   |   |   |   |   |   max_accel_3 <= 140
+|   |   |   |   |   |   |   |   var_accel_2 <= 0.2059: class3 (3.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 0.2059: class7 (3.0)
+|   |   |   |   |   |   |   max_accel_3 > 140: class3 (224.0)
+|   |   |   |   |   |   min_accel_2 > 115
+|   |   |   |   |   |   |   median_accel_1 <= 156: class6 (52.0/1.0)
+|   |   |   |   |   |   |   median_accel_1 > 156
+|   |   |   |   |   |   |   |   max_accel_2 <= 119: class6 (3.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 119: class3 (186.0/1.0)
+|   |   |   |   |   var_accel_3 > 0.3876
+|   |   |   |   |   |   max_accel_2 <= 115
+|   |   |   |   |   |   |   median_accel_3 <= 139.5
+|   |   |   |   |   |   |   |   max_accel_1 <= 157: class6 (7.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 157: class3 (2.0/1.0)
+|   |   |   |   |   |   |   median_accel_3 > 139.5: class3 (6.0)
+|   |   |   |   |   |   max_accel_2 > 115
+|   |   |   |   |   |   |   max_accel_1 <= 159: class6 (22.0/2.0)
+|   |   |   |   |   |   |   max_accel_1 > 159: class5 (2.0)
+|   |   |   |   max_accel_3 > 146
+|   |   |   |   |   median_accel_2 <= 115
+|   |   |   |   |   |   var_accel_1 <= 2.8059
+|   |   |   |   |   |   |   median_accel_3 <= 147.5
+|   |   |   |   |   |   |   |   min_accel_2 <= 109: class3 (3.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 109: class7 (2.0)
+|   |   |   |   |   |   |   median_accel_3 > 147.5: class3 (17.0)
+|   |   |   |   |   |   var_accel_1 > 2.8059: class7 (7.0/1.0)
+|   |   |   |   |   median_accel_2 > 115: class6 (91.0/1.0)
+|   median_accel_2 > 121.5
+|   |   max_accel_1 <= 159
+|   |   |   max_accel_3 <= 93
+|   |   |   |   max_accel_2 <= 128
+|   |   |   |   |   median_accel_1 <= 130
+|   |   |   |   |   |   max_accel_2 <= 124: class3 (2.0)
+|   |   |   |   |   |   max_accel_2 > 124: class0 (39.0)
+|   |   |   |   |   median_accel_1 > 130: class2 (10.0/1.0)
+|   |   |   |   max_accel_2 > 128: class2 (212.0)
+|   |   |   max_accel_3 > 93
+|   |   |   |   median_accel_3 <= 142.5
+|   |   |   |   |   max_accel_1 <= 154
+|   |   |   |   |   |   max_accel_2 <= 125
+|   |   |   |   |   |   |   median_accel_3 <= 103.5
+|   |   |   |   |   |   |   |   min_accel_3 <= 96: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 96: class6 (25.0/1.0)
+|   |   |   |   |   |   |   median_accel_3 > 103.5: class0 (5.0)
+|   |   |   |   |   |   max_accel_2 > 125
+|   |   |   |   |   |   |   median_accel_1 <= 97.5
+|   |   |   |   |   |   |   |   median_accel_1 <= 96.5: class0 (3.0)
+|   |   |   |   |   |   |   |   median_accel_1 > 96.5: class2 (18.0)
+|   |   |   |   |   |   |   median_accel_1 > 97.5
+|   |   |   |   |   |   |   |   max_accel_3 <= 105
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 126
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 96: class9 (25.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 96: class6 (7.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 126
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 131.5: class2 (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 131.5
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 131: class0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 131: class7 (2.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 105
+|   |   |   |   |   |   |   |   |   max_accel_2 <= 139
+|   |   |   |   |   |   |   |   |   |   median_accel_3 <= 107
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.04: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.04: class9 (4.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_3 > 107: class9 (525.0/7.0)
+|   |   |   |   |   |   |   |   |   max_accel_2 > 139
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 153
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 140.5: class7 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 140.5
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 151: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 151: class3 (11.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 153
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 132: class4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 132: class9 (106.0)
+|   |   |   |   |   max_accel_1 > 154
+|   |   |   |   |   |   median_accel_2 <= 130
+|   |   |   |   |   |   |   min_accel_1 <= 154
+|   |   |   |   |   |   |   |   min_accel_1 <= 153: class3 (3.0)
+|   |   |   |   |   |   |   |   min_accel_1 > 153: class6 (19.0)
+|   |   |   |   |   |   |   min_accel_1 > 154: class9 (55.0/4.0)
+|   |   |   |   |   |   median_accel_2 > 130
+|   |   |   |   |   |   |   min_accel_2 <= 135
+|   |   |   |   |   |   |   |   min_accel_3 <= 137
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 123
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 134
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 110: class2 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 110: class8 (2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 134: class0 (4.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 123: class7 (38.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 137
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 132
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 155
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 141.57: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 141.57: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 155: class3 (50.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 132: class0 (4.0/1.0)
+|   |   |   |   |   |   |   min_accel_2 > 135
+|   |   |   |   |   |   |   |   median_accel_2 <= 141: class2 (47.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 141: class0 (3.0/1.0)
+|   |   |   |   median_accel_3 > 142.5
+|   |   |   |   |   max_accel_1 <= 138
+|   |   |   |   |   |   median_accel_3 <= 147.5: class3 (49.0)
+|   |   |   |   |   |   median_accel_3 > 147.5
+|   |   |   |   |   |   |   median_accel_1 <= 126.5: class9 (85.0/2.0)
+|   |   |   |   |   |   |   median_accel_1 > 126.5
+|   |   |   |   |   |   |   |   median_accel_1 <= 134: class0 (14.0)
+|   |   |   |   |   |   |   |   median_accel_1 > 134: class9 (5.0)
+|   |   |   |   |   max_accel_1 > 138
+|   |   |   |   |   |   max_accel_2 <= 127
+|   |   |   |   |   |   |   median_accel_2 <= 124.5: class7 (32.0)
+|   |   |   |   |   |   |   median_accel_2 > 124.5: class3 (42.0)
+|   |   |   |   |   |   max_accel_2 > 127
+|   |   |   |   |   |   |   mean_accel_1 <= 145.08
+|   |   |   |   |   |   |   |   max_accel_2 <= 130
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 150: class9 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 150
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 143.5
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 151.5: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 151.5: class2 (42.0/1.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 143.5: class2 (49.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 130
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 150.5
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 150.34: class9 (26.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 > 150.34: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 150.5
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 130.03: class7 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 > 130.03: class0 (31.0)
+|   |   |   |   |   |   |   mean_accel_1 > 145.08
+|   |   |   |   |   |   |   |   mean_accel_2 <= 127.84: class3 (23.0/1.0)
+|   |   |   |   |   |   |   |   mean_accel_2 > 127.84
+|   |   |   |   |   |   |   |   |   max_accel_2 <= 129
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 150: class2 (85.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 150
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 151.37: class3 (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 151.37: class2 (75.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_2 > 129
+|   |   |   |   |   |   |   |   |   |   median_accel_2 <= 133.5
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 149
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 132: class7 (42.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 132: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 149: class2 (15.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_2 > 133.5: class2 (176.0/6.0)
+|   |   max_accel_1 > 159
+|   |   |   mean_accel_2 <= 125.19
+|   |   |   |   min_accel_2 <= 124: class9 (95.0)
+|   |   |   |   min_accel_2 > 124: class2 (91.0)
+|   |   |   mean_accel_2 > 125.19
+|   |   |   |   min_accel_2 <= 134
+|   |   |   |   |   max_accel_3 <= 118
+|   |   |   |   |   |   min_accel_3 <= 112: class6 (4.0)
+|   |   |   |   |   |   min_accel_3 > 112: class9 (45.0)
+|   |   |   |   |   max_accel_3 > 118
+|   |   |   |   |   |   max_accel_2 <= 132
+|   |   |   |   |   |   |   max_accel_2 <= 127
+|   |   |   |   |   |   |   |   var_accel_3 <= 0: class2 (6.0)
+|   |   |   |   |   |   |   |   var_accel_3 > 0
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 131: class6 (27.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 131
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 132: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 132: class6 (10.0/1.0)
+|   |   |   |   |   |   |   max_accel_2 > 127
+|   |   |   |   |   |   |   |   max_accel_3 <= 122
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 127: class6 (3.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 127: class0 (2.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 122: class6 (189.0/2.0)
+|   |   |   |   |   |   max_accel_2 > 132: class2 (5.0)
+|   |   |   |   min_accel_2 > 134: class9 (59.0)
+var_accel_2 > 0.2564
+|   mean_accel_2 <= 131.89
+|   |   min_accel_1 <= 141
+|   |   |   median_accel_2 <= 126
+|   |   |   |   median_accel_2 <= 100.5
+|   |   |   |   |   min_accel_2 <= 95
+|   |   |   |   |   |   median_accel_3 <= 136.5
+|   |   |   |   |   |   |   mean_accel_1 <= 126.94: class6 (9.0/1.0)
+|   |   |   |   |   |   |   mean_accel_1 > 126.94
+|   |   |   |   |   |   |   |   min_accel_2 <= 94: class0 (57.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 94
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 121: class6 (3.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 121: class0 (3.0)
+|   |   |   |   |   |   median_accel_3 > 136.5: class2 (2.0/1.0)
+|   |   |   |   |   min_accel_2 > 95
+|   |   |   |   |   |   median_accel_1 <= 118.5
+|   |   |   |   |   |   |   min_accel_1 <= 112: class4 (2.0)
+|   |   |   |   |   |   |   min_accel_1 > 112: class3 (2.0)
+|   |   |   |   |   |   median_accel_1 > 118.5
+|   |   |   |   |   |   |   median_accel_3 <= 110.5
+|   |   |   |   |   |   |   |   max_accel_2 <= 106
+|   |   |   |   |   |   |   |   |   min_accel_1 <= 124: class2 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_1 > 124: class9 (2.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 106: class0 (2.0)
+|   |   |   |   |   |   |   median_accel_3 > 110.5
+|   |   |   |   |   |   |   |   max_accel_2 <= 104
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 126: class7 (14.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 126
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 98: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 98: class7 (2.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 104: class2 (5.0/2.0)
+|   |   |   |   median_accel_2 > 100.5
+|   |   |   |   |   min_accel_1 <= 99
+|   |   |   |   |   |   mean_accel_3 <= 125.21
+|   |   |   |   |   |   |   max_accel_1 <= 107
+|   |   |   |   |   |   |   |   min_accel_2 <= 118
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 111
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 97: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 97: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 111
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 8.8931
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 18.3259: class4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 18.3259
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 92: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 92: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 8.8931
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 23.5724
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 14.8371
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 114: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 117: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 117: class4 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 14.8371: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 23.5724: class4 (9.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 118
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 103: class0 (4.0/2.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 103: class7 (5.0/1.0)
+|   |   |   |   |   |   |   max_accel_1 > 107
+|   |   |   |   |   |   |   |   min_accel_1 <= 80
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 76: class4 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 76
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 104.57: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 > 104.57: class9 (11.0)
+|   |   |   |   |   |   |   |   min_accel_1 > 80
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 110
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 109
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 100: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 100: class3 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 109
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 105
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 87
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 115: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 115
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 84
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 96: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 96: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 84: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 87
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 118.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 97
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 118: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 118
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 91
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 101.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 100: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 100: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 101.5: class9 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 91: class5 (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 97
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 137: class4 (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 137: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 118.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 96
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 93: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 93: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 96: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 105
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 112
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 106.66: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 106.66: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 112
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 123.39
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 22.3336: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 22.3336: class5 (16.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 123.39: class4 (4.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 110
+|   |   |   |   |   |   |   |   |   |   median_accel_2 <= 125
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 99.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 91: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 91: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 99.5
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 107.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 105
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 98: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 98: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 105
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 117.5: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 117.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 95.2875
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 134: class5 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 134: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 95.2875
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 93: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 93: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 107.5: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_2 > 125
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 120: class2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 120: class5 (3.0/1.0)
+|   |   |   |   |   |   mean_accel_3 > 125.21
+|   |   |   |   |   |   |   var_accel_1 <= 46.1
+|   |   |   |   |   |   |   |   max_accel_2 <= 117
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 129.5: class0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 129.5: class9 (4.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 117
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 108: class0 (6.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 108
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 20.3091
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 106: class2 (23.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 106
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 126: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 126: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 20.3091
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 93: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 93: class9 (3.0)
+|   |   |   |   |   |   |   var_accel_1 > 46.1
+|   |   |   |   |   |   |   |   max_accel_1 <= 150: class9 (16.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 150: class3 (3.0/1.0)
+|   |   |   |   |   min_accel_1 > 99
+|   |   |   |   |   |   max_accel_1 <= 124
+|   |   |   |   |   |   |   max_accel_3 <= 132
+|   |   |   |   |   |   |   |   var_accel_1 <= 1.3096
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 94: class0 (3.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 94
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 116
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 114: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 114: class3 (4.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 116
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 121
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 117: class6 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 117: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 121: class6 (27.0)
+|   |   |   |   |   |   |   |   var_accel_1 > 1.3096
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 96
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 120
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 2.0851: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 2.0851
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 106: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 106: class9 (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 120: class4 (3.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 96
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 2.63
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 109
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 1.5736
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.5875: class9 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.5875: class6 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 1.5736: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 117
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 115
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 115: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 115: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 115: class3 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 117
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 103: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 103: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 109: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 2.63
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 108: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 108
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 21.7224
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 102.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 101: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 101
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 11.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 113: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 113: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 11.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 99.5: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 99.5: class6 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 102.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 98
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 113: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 113: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 98: class6 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 109: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 130: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 21.7224
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 89: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 89: class5 (6.0)
+|   |   |   |   |   |   |   max_accel_3 > 132
+|   |   |   |   |   |   |   |   max_accel_3 <= 148
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 127: class0 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 127
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 103: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 103: class7 (8.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 148
+|   |   |   |   |   |   |   |   |   var_accel_2 <= 4.2571: class9 (7.0)
+|   |   |   |   |   |   |   |   |   var_accel_2 > 4.2571
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 7.7219: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 7.7219: class9 (4.0/1.0)
+|   |   |   |   |   |   max_accel_1 > 124
+|   |   |   |   |   |   |   min_accel_2 <= 111
+|   |   |   |   |   |   |   |   min_accel_2 <= 104
+|   |   |   |   |   |   |   |   |   min_accel_1 <= 129
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 146.58
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 100
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 102: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 102: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 114: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 128.58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 107: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 139
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 106.32: class9 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 106.32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 89: class9 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 89: class0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 139: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 128.58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 128: class9 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 139: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 139: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 103: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 103
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 135: class9 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 135
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 87
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 70: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 70: class9 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 87: class3 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 157.8131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 110: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 110
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 41.0331
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 119: class3 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 93: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 93: class7 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 41.0331
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 108.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 120: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 120: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 108.5: class7 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 128: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 157.8131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 120: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 120: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 100
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 101
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 109: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 103: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 103: class0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 101
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 84
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 133: class5 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 133: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 84
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 123
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 127.08: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 127.08: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 108: class9 (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 123
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 46.2044
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 95: class3 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 95: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 46.2044: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 108: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 146: class7 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 146: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 > 146.58
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 99: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 99
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 148.08: class6 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 148.08: class0 (6.0)
+|   |   |   |   |   |   |   |   |   min_accel_1 > 129
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 95
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 152
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 15.4131: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 15.4131: class0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 152: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 95
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 135.31
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 99
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 43.1651
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 140: class7 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 140: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 43.1651: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 99
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 120
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 13.4851: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 13.4851: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 120
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 103: class6 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 103: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 135.31
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 144
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 98
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 133: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 133: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 98
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 148.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 146: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 146: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132: class7 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 148.5: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 144
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 101: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 101
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 103: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 103: class9 (2.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 104
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 4.3316
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 119
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 96
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 111: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 111
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 126: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 126: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 96: class7 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 119
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 145
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 109.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 1.8916: class3 (34.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 1.8916
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 126: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 126: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 109.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 136.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 147: class3 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 147: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 136.5: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 111.65: class6 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 111.65: class3 (20.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 145
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 146.94
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 5.07
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 148
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 108: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 108: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 148
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 149: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 149: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 5.07: class7 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 146.94: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 4.3316
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 54.0875
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 10.01
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 110: class5 (24.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 110: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 10.01
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 115
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 119.5: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 119.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 110.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 146.5: class5 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 146.5: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 136: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 136: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 110.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 96: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 96
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 114: class5 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 134: class5 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 134: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 115
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 105
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 127: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 127: class0 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 105
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 95: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 117
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 97.12: class9 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 97.12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 108: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 108: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 117
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 126: class7 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 120: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 120: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 139: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 139: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 107: class6 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 21.1076: class7 (16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 21.1076
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 152: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 152: class3 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 142: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 119: class9 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 124: class3 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 124
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 109: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 109: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 148.05: class5 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 148.05: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 130: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 130: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 54.0875
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 153
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 19.08: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 19.08
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 134: class2 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 134: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 153
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 135: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 135: class4 (2.0)
+|   |   |   |   |   |   |   min_accel_2 > 111
+|   |   |   |   |   |   |   |   median_accel_2 <= 116.5
+|   |   |   |   |   |   |   |   |   median_accel_1 <= 142.5
+|   |   |   |   |   |   |   |   |   |   min_accel_3 <= 92: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_3 > 92
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 115.5: class3 (15.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 115.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132: class9 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_1 > 142.5
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 139: class6 (6.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 139: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 116.5
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 4.0899
+|   |   |   |   |   |   |   |   |   |   median_accel_3 <= 123
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 137
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 119.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 92: class5 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 92: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 119.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 124.5: class0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 124.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 126.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 123: class3 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 123: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 126.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 93: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 93
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 94.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 88: class3 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 88: class0 (28.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 94.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 134: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 134: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 137
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 139: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 139
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 122.5: class3 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 122.5: class6 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_3 > 123
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 126.5
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 129: class9 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 129: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 126.5
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 1.7611
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 1.53: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 1.53
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 14.9675: class5 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 14.9675: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 1.7611: class0 (25.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 4.0899
+|   |   |   |   |   |   |   |   |   |   median_accel_3 <= 93.5
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 109
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 87
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 138: class3 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 138: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 87: class5 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 109: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_3 > 93.5
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 146
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 135.68
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 110
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 89
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 116: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 116: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 89
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 102
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 117.03: class6 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 117.03: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 102: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 110: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 135.68
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 11.7944: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 11.7944: class0 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 146
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 141
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class4 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 147
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 149: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 149: class2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 147
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 174
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 27.6211
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 23.2916: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 23.2916: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 27.6211
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 125.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 144
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 66.6075
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 114: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 149.5: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 149.5: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 66.6075: class5 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 144: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 125.5: class5 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 174: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 141
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 121
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 6.5204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 120: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 120
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 152: class7 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 152: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 6.5204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 14.5059
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 144
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 154: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 154: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 144: class0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 14.5059: class2 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 121: class4 (5.0/1.0)
+|   |   |   median_accel_2 > 126
+|   |   |   |   min_accel_3 <= 147
+|   |   |   |   |   min_accel_2 <= 129
+|   |   |   |   |   |   max_accel_2 <= 146
+|   |   |   |   |   |   |   mean_accel_3 <= 92.24
+|   |   |   |   |   |   |   |   max_accel_1 <= 130
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 90: class3 (5.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 90: class4 (2.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 130
+|   |   |   |   |   |   |   |   |   median_accel_2 <= 129
+|   |   |   |   |   |   |   |   |   |   min_accel_3 <= 87: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_3 > 87: class3 (3.0)
+|   |   |   |   |   |   |   |   |   median_accel_2 > 129: class2 (8.0/1.0)
+|   |   |   |   |   |   |   mean_accel_3 > 92.24
+|   |   |   |   |   |   |   |   var_accel_3 <= 1.9339
+|   |   |   |   |   |   |   |   |   mean_accel_2 <= 127.03
+|   |   |   |   |   |   |   |   |   |   min_accel_3 <= 103: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_3 > 103: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   mean_accel_2 > 127.03
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 114: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 114
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 129.5
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 94.06: class0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 94.06
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 130: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 131: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 129.5: class2 (5.0/1.0)
+|   |   |   |   |   |   |   |   var_accel_3 > 1.9339
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 121.1556
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 100
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 47.4356
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 3.5539
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 109: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 128.5: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 128.5: class0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 3.5539: class5 (24.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 47.4356: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 100
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 5.9019
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 91: class7 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 91: class5 (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 5.9019
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 90
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 130.5: class4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 130.5: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 142: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 133: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 90
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 111
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 132.5: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 132.5: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 111
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 14.2075: class0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 14.2075: class4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 94: class2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 94: class9 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 127
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 149.62
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 98.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 92.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 91.5: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 91.5: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 92.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 82: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 82
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 131: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 11.0131: class7 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 11.0131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 27.4864
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 135: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 135: class5 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 27.4864: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 98.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 126.5: class0 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 126.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 139: class5 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 139: class2 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 132: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 156: class0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 156: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 150: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 150
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 148
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 138: class5 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 138: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 135: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 135: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 148
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 136: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 144: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 144: class5 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 151: class5 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 129.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 150
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 170: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 170: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 150: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 129.5: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 149.62
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 141: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 141: class7 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 139
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 128.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 131: class5 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 131: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 128.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 134: class3 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 134: class5 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 139: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 121.1556
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 153
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 129.54: class2 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 129.54
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 128: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 128: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 153: class0 (4.0/1.0)
+|   |   |   |   |   |   max_accel_2 > 146
+|   |   |   |   |   |   |   max_accel_1 <= 176
+|   |   |   |   |   |   |   |   mean_accel_2 <= 130.08
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 207.3004: class4 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 207.3004: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   mean_accel_2 > 130.08
+|   |   |   |   |   |   |   |   |   median_accel_2 <= 129.5: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_2 > 129.5: class9 (7.0/2.0)
+|   |   |   |   |   |   |   max_accel_1 > 176
+|   |   |   |   |   |   |   |   var_accel_2 <= 216.2259: class3 (3.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 216.2259: class0 (3.0/1.0)
+|   |   |   |   |   min_accel_2 > 129: class2 (26.0)
+|   |   |   |   min_accel_3 > 147
+|   |   |   |   |   max_accel_1 <= 125: class9 (6.0)
+|   |   |   |   |   max_accel_1 > 125
+|   |   |   |   |   |   min_accel_1 <= 135
+|   |   |   |   |   |   |   max_accel_3 <= 156: class0 (32.0/1.0)
+|   |   |   |   |   |   |   max_accel_3 > 156
+|   |   |   |   |   |   |   |   min_accel_2 <= 127: class0 (10.0/3.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 127: class7 (5.0/1.0)
+|   |   |   |   |   |   min_accel_1 > 135
+|   |   |   |   |   |   |   median_accel_1 <= 140.5
+|   |   |   |   |   |   |   |   median_accel_1 <= 139.5: class7 (2.0)
+|   |   |   |   |   |   |   |   median_accel_1 > 139.5: class2 (3.0)
+|   |   |   |   |   |   |   median_accel_1 > 140.5
+|   |   |   |   |   |   |   |   max_accel_3 <= 156
+|   |   |   |   |   |   |   |   |   var_accel_2 <= 3.6939: class0 (12.0/2.0)
+|   |   |   |   |   |   |   |   |   var_accel_2 > 3.6939: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 156: class2 (3.0)
+|   |   min_accel_1 > 141
+|   |   |   max_accel_3 <= 130
+|   |   |   |   mean_accel_2 <= 129
+|   |   |   |   |   min_accel_2 <= 125
+|   |   |   |   |   |   max_accel_2 <= 134
+|   |   |   |   |   |   |   max_accel_1 <= 158
+|   |   |   |   |   |   |   |   max_accel_2 <= 110
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 117
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 152
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 0.65: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 0.65: class7 (5.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 152
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 149.5: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 149.5: class5 (5.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 117: class6 (16.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 110
+|   |   |   |   |   |   |   |   |   median_accel_2 <= 127: class6 (84.0/4.0)
+|   |   |   |   |   |   |   |   |   median_accel_2 > 127: class0 (2.0)
+|   |   |   |   |   |   |   max_accel_1 > 158
+|   |   |   |   |   |   |   |   max_accel_3 <= 119
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 161: class6 (22.0/2.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 161
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 151: class6 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 151: class9 (5.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 119
+|   |   |   |   |   |   |   |   |   min_accel_1 <= 149
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 147: class6 (15.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 147: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_1 > 149
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 161.5
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 160.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 157
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 150
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 109: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 109: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 150
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 156
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 160
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 108: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 108: class6 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 160
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 153: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 153: class6 (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 156
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.5556: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.5556: class4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 118
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 113: class6 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 113
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 120: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 120: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 127: class7 (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 164: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 118
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 2.2939: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 2.2939
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 121: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 121: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 157
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 159.86
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.7075: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.7075: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 159.86
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 160.22: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 160.22: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 164: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 160.5
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130: class6 (21.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 130: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 161.5
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 126.5: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 126.5: class0 (2.0/1.0)
+|   |   |   |   |   |   max_accel_2 > 134
+|   |   |   |   |   |   |   max_accel_3 <= 127: class4 (6.0)
+|   |   |   |   |   |   |   max_accel_3 > 127: class0 (2.0/1.0)
+|   |   |   |   |   min_accel_2 > 125
+|   |   |   |   |   |   min_accel_1 <= 152: class0 (7.0/1.0)
+|   |   |   |   |   |   min_accel_1 > 152
+|   |   |   |   |   |   |   max_accel_1 <= 160
+|   |   |   |   |   |   |   |   var_accel_3 <= 0.7499: class9 (5.0)
+|   |   |   |   |   |   |   |   var_accel_3 > 0.7499
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 118: class6 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 118: class9 (2.0)
+|   |   |   |   |   |   |   max_accel_1 > 160: class6 (20.0/4.0)
+|   |   |   |   mean_accel_2 > 129
+|   |   |   |   |   var_accel_1 <= 0.8024
+|   |   |   |   |   |   min_accel_1 <= 156: class0 (2.0/1.0)
+|   |   |   |   |   |   min_accel_1 > 156
+|   |   |   |   |   |   |   min_accel_2 <= 127: class5 (2.0)
+|   |   |   |   |   |   |   min_accel_2 > 127: class6 (2.0/1.0)
+|   |   |   |   |   var_accel_1 > 0.8024
+|   |   |   |   |   |   median_accel_2 <= 129.5
+|   |   |   |   |   |   |   max_accel_2 <= 135
+|   |   |   |   |   |   |   |   var_accel_3 <= 7.5956: class4 (3.0)
+|   |   |   |   |   |   |   |   var_accel_3 > 7.5956: class0 (2.0/1.0)
+|   |   |   |   |   |   |   max_accel_2 > 135: class0 (3.0)
+|   |   |   |   |   |   median_accel_2 > 129.5
+|   |   |   |   |   |   |   max_accel_2 <= 134
+|   |   |   |   |   |   |   |   max_accel_2 <= 132: class4 (3.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 132
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 125
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 130.21: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 > 130.21: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 125: class8 (5.0/1.0)
+|   |   |   |   |   |   |   max_accel_2 > 134: class4 (5.0)
+|   |   |   max_accel_3 > 130
+|   |   |   |   max_accel_3 <= 147
+|   |   |   |   |   min_accel_3 <= 138
+|   |   |   |   |   |   max_accel_1 <= 166
+|   |   |   |   |   |   |   min_accel_2 <= 119
+|   |   |   |   |   |   |   |   min_accel_2 <= 102
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 125: class6 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 125
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 154: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 154
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 101: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 101: class3 (2.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 102
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 117
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 158
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 155.98
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 157
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 154.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 106
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 103: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 103
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 135: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 135: class6 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 106
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 1.9736
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 134: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 134: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 1.9736
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 11.07
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 132: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 114: class5 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 114: class4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 132: class5 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 11.07: class6 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 136: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 154.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 112: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 112: class6 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 116: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 157
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 156.5: class5 (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 156.5: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125: class6 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 127: class7 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 148: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 148: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 155.98: class7 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 114: class6 (23.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 158
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 5.6336
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 134.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 119.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 116: class7 (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 116: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 119.5: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 134.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 112: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 112: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 159: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 5.6336
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 134.04
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 1.1416: class0 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 1.1416
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 141
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 107: class6 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 117: class6 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 117
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 153.5: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 153.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 154
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 111: class7 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 111: class6 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 154: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 141: class6 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 134.04
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 4.6939: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 4.6939: class7 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 122: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 23.6944
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 159: class6 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 122: class6 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 122: class5 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 151: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 151: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 23.6944: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 130
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 156.68
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 140.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 116: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 116
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 97.8691: class4 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 97.8691: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 140.5: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 156.68: class7 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 117
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 151
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 140.09
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 162: class4 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 162: class2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 140.09: class5 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 151
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 118
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 132: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 132: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 140: class7 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 140: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 118
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125: class4 (2.0)
+|   |   |   |   |   |   |   min_accel_2 > 119
+|   |   |   |   |   |   |   |   max_accel_3 <= 139
+|   |   |   |   |   |   |   |   |   median_accel_2 <= 130.5
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 157.5
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 135: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 135
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 156.5: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 156.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 135: class7 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 135: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 157.5
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 134
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 126.2: class6 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 126.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 154: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 154
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 160.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 127: class6 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 127: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 160.5: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 154: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 154: class6 (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 134
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 134: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 134: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_2 > 130.5
+|   |   |   |   |   |   |   |   |   |   median_accel_1 <= 157.5: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_1 > 157.5
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 136
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 156: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 156: class7 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 136: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 139
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 141.5
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 144
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 156.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 130.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 128: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 128: class5 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 130.5: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 133: class5 (27.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 156.5
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 1.6011: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 1.6011
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125: class5 (8.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 158.49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 165: class5 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 165: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 158.49: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 144
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130: class6 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 130
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 126: class5 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 9.3875: class6 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 9.3875: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 141.5
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 127
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 137
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 3.9811: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 3.9811: class5 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 137: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 127
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 146: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 146: class7 (3.0/1.0)
+|   |   |   |   |   |   max_accel_1 > 166
+|   |   |   |   |   |   |   max_accel_1 <= 170
+|   |   |   |   |   |   |   |   max_accel_3 <= 132: class0 (8.0/2.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 132
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 145
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 125
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 129.5
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 138
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 156.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 134: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 134: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 156.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 124.98: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 124.98: class6 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 128: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 138: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 161: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 132: class4 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 129.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 118: class7 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 118: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 125
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 169: class6 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 169: class0 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 145: class2 (2.0)
+|   |   |   |   |   |   |   max_accel_1 > 170
+|   |   |   |   |   |   |   |   var_accel_2 <= 9.1284
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 173: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 173: class0 (3.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 9.1284
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 123: class3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 123
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 136: class4 (6.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 136
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 149
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 121: class2 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 121: class3 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 149: class7 (2.0)
+|   |   |   |   |   min_accel_3 > 138
+|   |   |   |   |   |   mean_accel_2 <= 127.55
+|   |   |   |   |   |   |   max_accel_2 <= 116
+|   |   |   |   |   |   |   |   max_accel_3 <= 144: class3 (18.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 144: class5 (4.0)
+|   |   |   |   |   |   |   max_accel_2 > 116
+|   |   |   |   |   |   |   |   median_accel_2 <= 127.5: class6 (16.0/1.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 127.5: class3 (2.0)
+|   |   |   |   |   |   mean_accel_2 > 127.55
+|   |   |   |   |   |   |   var_accel_3 <= 2.7704
+|   |   |   |   |   |   |   |   var_accel_2 <= 0.4756
+|   |   |   |   |   |   |   |   |   mean_accel_1 <= 151.57: class2 (2.0)
+|   |   |   |   |   |   |   |   |   mean_accel_1 > 151.57
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 155: class7 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 155: class3 (5.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 0.4756: class7 (13.0)
+|   |   |   |   |   |   |   var_accel_3 > 2.7704
+|   |   |   |   |   |   |   |   median_accel_3 <= 144: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   median_accel_3 > 144: class2 (3.0)
+|   |   |   |   max_accel_3 > 147
+|   |   |   |   |   max_accel_2 <= 121
+|   |   |   |   |   |   mean_accel_2 <= 116.75: class5 (19.0/2.0)
+|   |   |   |   |   |   mean_accel_2 > 116.75: class6 (9.0/1.0)
+|   |   |   |   |   max_accel_2 > 121
+|   |   |   |   |   |   min_accel_1 <= 142
+|   |   |   |   |   |   |   min_accel_3 <= 141
+|   |   |   |   |   |   |   |   min_accel_2 <= 124
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 153
+|   |   |   |   |   |   |   |   |   |   var_accel_1 <= 66.2275: class7 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_1 > 66.2275: class4 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 153: class4 (2.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 124: class6 (2.0)
+|   |   |   |   |   |   |   min_accel_3 > 141
+|   |   |   |   |   |   |   |   min_accel_2 <= 126: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 126
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 151: class7 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 151: class2 (2.0/1.0)
+|   |   |   |   |   |   min_accel_1 > 142
+|   |   |   |   |   |   |   min_accel_1 <= 148
+|   |   |   |   |   |   |   |   max_accel_2 <= 129
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 106
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 126: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 126: class4 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 106
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 149
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 148.43: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 148.43: class5 (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 128: class8 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 149
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 122: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 122
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 147.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 127: class0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 149.01: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 149.01: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 147.5: class0 (10.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 129
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 154
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 131.06
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 154
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 147.19
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 153: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 153
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 125: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 125: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 147.19: class0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 154: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 > 131.06
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 151
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 148.97: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 148.97: class7 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 151: class5 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 154
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 130
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 145: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 145: class6 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 130
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 153
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 160
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 8.1744
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 7.1091: class5 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 7.1091
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 123: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 123: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 8.1744: class5 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 160
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 133: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 123: class0 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 123: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 153: class0 (2.0/1.0)
+|   |   |   |   |   |   |   min_accel_1 > 148
+|   |   |   |   |   |   |   |   var_accel_2 <= 2.4036: class3 (3.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 2.4036
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 141
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 153.16: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 > 153.16
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 138.57: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 138.57: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 141: class7 (2.0)
+|   mean_accel_2 > 131.89
+|   |   max_accel_2 <= 157
+|   |   |   min_accel_2 <= 142
+|   |   |   |   median_accel_3 <= 150.5
+|   |   |   |   |   var_accel_1 <= 1.4539
+|   |   |   |   |   |   var_accel_2 <= 1.4084
+|   |   |   |   |   |   |   max_accel_1 <= 114
+|   |   |   |   |   |   |   |   min_accel_2 <= 132: class9 (3.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 132
+|   |   |   |   |   |   |   |   |   max_accel_2 <= 138
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 106: class2 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 106: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_2 > 138: class4 (7.0/2.0)
+|   |   |   |   |   |   |   max_accel_1 > 114
+|   |   |   |   |   |   |   |   var_accel_1 <= 0.0936: class9 (3.0/1.0)
+|   |   |   |   |   |   |   |   var_accel_1 > 0.0936
+|   |   |   |   |   |   |   |   |   median_accel_1 <= 150.5: class2 (29.0)
+|   |   |   |   |   |   |   |   |   median_accel_1 > 150.5
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 142
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 149: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 1.2675
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.2931: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.2931: class7 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 1.2675: class2 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 133
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 158: class2 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 158
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 139: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 139: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 142: class7 (4.0)
+|   |   |   |   |   |   var_accel_2 > 1.4084
+|   |   |   |   |   |   |   min_accel_2 <= 129: class0 (3.0)
+|   |   |   |   |   |   |   min_accel_2 > 129
+|   |   |   |   |   |   |   |   min_accel_3 <= 139
+|   |   |   |   |   |   |   |   |   median_accel_1 <= 140: class1 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   median_accel_1 > 140
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 1.8584: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 1.8584
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 120: class4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 120
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 141: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 141: class4 (2.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 139: class2 (6.0/1.0)
+|   |   |   |   |   var_accel_1 > 1.4539
+|   |   |   |   |   |   max_accel_2 <= 142
+|   |   |   |   |   |   |   min_accel_1 <= 101
+|   |   |   |   |   |   |   |   var_accel_2 <= 9.8419
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 4.5059
+|   |   |   |   |   |   |   |   |   |   min_accel_2 <= 134: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_2 > 134: class2 (2.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 4.5059
+|   |   |   |   |   |   |   |   |   |   var_accel_1 <= 6.9851
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 139: class0 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 139: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_1 > 6.9851
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 37.2884: class2 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 37.2884: class9 (2.0)
+|   |   |   |   |   |   |   |   var_accel_2 > 9.8419
+|   |   |   |   |   |   |   |   |   min_accel_2 <= 120: class2 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_2 > 120
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 92: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 92: class0 (3.0/1.0)
+|   |   |   |   |   |   |   min_accel_1 > 101
+|   |   |   |   |   |   |   |   min_accel_2 <= 131
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 100
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 115
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 102
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 113.79: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 113.79: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 102: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 115
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 32.7475
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 140
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 155
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 146: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 146: class7 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 155: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 140: class7 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 32.7475
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 91: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 91: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 100
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 168
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 165
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 136: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 136: class4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 164: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 2.2875
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 156
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 149: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 149: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 156: class7 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 2.2875
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 143
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 143
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 141: class2 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 141: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 148: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 148: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 143
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 15.7379
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 152.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 147: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 147
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 141: class5 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 141: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 152.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 139.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 159: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 126: class7 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 126: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 139.5: class5 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 135: class2 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 135: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 15.7379
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 136.5: class5 (17.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 136.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 140.5: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 140.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 151.54: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 151.54: class5 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 143
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 126: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 126: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 165
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 6.87: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 6.87
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 166
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 159.5: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 159.5: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 166: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 149: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 149: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 168
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 123
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 122: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 122: class1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 123
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 146: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 146
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 129: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 129: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   min_accel_2 > 131
+|   |   |   |   |   |   |   |   |   median_accel_1 <= 144
+|   |   |   |   |   |   |   |   |   |   var_accel_3 <= 3.0499: class0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_3 > 3.0499: class1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   median_accel_1 > 144
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 1.8316
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 148: class9 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 148
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 130.64
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 0.4491: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 0.4491
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 135.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 132: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 132: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 135.5: class0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 130.64
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 131.35: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 131.35: class2 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 1.8316
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 150
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 8.6344: class2 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 8.6344
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 140: class4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 140: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 150
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 140: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 140: class4 (5.0)
+|   |   |   |   |   |   max_accel_2 > 142
+|   |   |   |   |   |   |   var_accel_2 <= 3.6571
+|   |   |   |   |   |   |   |   max_accel_1 <= 139
+|   |   |   |   |   |   |   |   |   min_accel_1 <= 110: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_1 > 110: class9 (2.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 139
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 129
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 141: class1 (2.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 141: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 129: class1 (30.0/5.0)
+|   |   |   |   |   |   |   var_accel_2 > 3.6571
+|   |   |   |   |   |   |   |   min_accel_1 <= 143
+|   |   |   |   |   |   |   |   |   mean_accel_1 <= 113.55
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 108.97
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 140
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 147
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 67.5324: class4 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 67.5324: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 147
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 148: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 148
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 146.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 103.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 90: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 90
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 103: class4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 103
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 90: class2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 90: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 103.5: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 146.5: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 140: class9 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 > 108.97
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 139
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 118: class8 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 118: class0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 139
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 152: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 152: class9 (3.0)
+|   |   |   |   |   |   |   |   |   mean_accel_1 > 113.55
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 123
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 143
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 138
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 97.5: class1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 97.5: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 157.8499
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 9.8556: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 9.8556: class2 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 7.1075: class2 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 7.1075: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 157.8499: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 138
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 154
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 111: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 111: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 154: class9 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 143
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 150: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 150: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 123
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 141.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 6.8611: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 6.8611
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 127: class1 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 152: class1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 152: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 130
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 141: class1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 141: class0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 141.5
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 127: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 127: class4 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 140.39: class2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 140.39: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 132: class5 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 132: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 132: class4 (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 143: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 143: class5 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 143.19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 52.7736
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 145
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 138: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 138: class0 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 122: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 149.63: class2 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 149.63: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 151: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 145: class1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 52.7736
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 163: class9 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 163: class1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 143.19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 146.92
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 141: class1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 141: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 146.92: class4 (2.0)
+|   |   |   |   |   |   |   |   min_accel_1 > 143
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 133.5
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 144
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 7.3196: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 7.3196
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 119: class2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 119
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 137
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 7.9124: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 7.9124: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 137: class4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 144
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 5.6084
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 4.4379: class4 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 4.4379: class5 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 5.6084: class4 (49.0/6.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 133.5
+|   |   |   |   |   |   |   |   |   |   var_accel_2 <= 10.6299
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 141.03
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 7.0004: class2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 7.0004: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 141.03
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 155: class9 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 155: class3 (3.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_2 > 10.6299
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 141
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 149: class7 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 140: class4 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 140: class0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 141
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 6.6891
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 134.5: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 134.5: class4 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 6.6891
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 129
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 168: class5 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 168: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 129
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 134
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 13.5859: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 13.5859
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 160: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 160: class2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 134: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 149: class4 (5.0/1.0)
+|   |   |   |   median_accel_3 > 150.5
+|   |   |   |   |   var_accel_1 <= 9.69
+|   |   |   |   |   |   max_accel_2 <= 147
+|   |   |   |   |   |   |   min_accel_3 <= 145
+|   |   |   |   |   |   |   |   max_accel_2 <= 144: class5 (3.0)
+|   |   |   |   |   |   |   |   max_accel_2 > 144: class0 (5.0)
+|   |   |   |   |   |   |   min_accel_3 > 145: class0 (44.0/1.0)
+|   |   |   |   |   |   max_accel_2 > 147: class1 (3.0/1.0)
+|   |   |   |   |   var_accel_1 > 9.69
+|   |   |   |   |   |   median_accel_1 <= 134
+|   |   |   |   |   |   |   median_accel_2 <= 136.5: class0 (4.0)
+|   |   |   |   |   |   |   median_accel_2 > 136.5
+|   |   |   |   |   |   |   |   median_accel_1 <= 130: class9 (7.0)
+|   |   |   |   |   |   |   |   median_accel_1 > 130: class0 (2.0/1.0)
+|   |   |   |   |   |   median_accel_1 > 134
+|   |   |   |   |   |   |   max_accel_2 <= 145
+|   |   |   |   |   |   |   |   median_accel_2 <= 133.5
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 155: class5 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 155: class4 (3.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 133.5: class5 (3.0)
+|   |   |   |   |   |   |   max_accel_2 > 145: class0 (2.0/1.0)
+|   |   |   min_accel_2 > 142
+|   |   |   |   mean_accel_3 <= 143.36
+|   |   |   |   |   max_accel_2 <= 150
+|   |   |   |   |   |   var_accel_2 <= 0.4364: class7 (2.0)
+|   |   |   |   |   |   var_accel_2 > 0.4364
+|   |   |   |   |   |   |   min_accel_2 <= 144: class1 (5.0/1.0)
+|   |   |   |   |   |   |   min_accel_2 > 144: class0 (5.0/1.0)
+|   |   |   |   |   max_accel_2 > 150
+|   |   |   |   |   |   max_accel_3 <= 140
+|   |   |   |   |   |   |   max_accel_3 <= 105: class5 (3.0/1.0)
+|   |   |   |   |   |   |   max_accel_3 > 105
+|   |   |   |   |   |   |   |   min_accel_3 <= 128: class4 (22.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 128
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 132: class0 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 132: class4 (3.0)
+|   |   |   |   |   |   max_accel_3 > 140
+|   |   |   |   |   |   |   min_accel_3 <= 137
+|   |   |   |   |   |   |   |   max_accel_1 <= 152: class4 (2.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 152: class5 (5.0)
+|   |   |   |   |   |   |   min_accel_3 > 137: class0 (2.0)
+|   |   |   |   mean_accel_3 > 143.36
+|   |   |   |   |   min_accel_1 <= 122: class3 (22.0)
+|   |   |   |   |   min_accel_1 > 122
+|   |   |   |   |   |   min_accel_2 <= 147: class1 (8.0/1.0)
+|   |   |   |   |   |   min_accel_2 > 147
+|   |   |   |   |   |   |   min_accel_1 <= 123: class1 (2.0)
+|   |   |   |   |   |   |   min_accel_1 > 123: class3 (9.0)
+|   |   max_accel_2 > 157
+|   |   |   min_accel_3 <= 130
+|   |   |   |   var_accel_1 <= 222.2859
+|   |   |   |   |   min_accel_2 <= 129
+|   |   |   |   |   |   max_accel_2 <= 161
+|   |   |   |   |   |   |   min_accel_3 <= 96: class0 (3.0/1.0)
+|   |   |   |   |   |   |   min_accel_3 > 96
+|   |   |   |   |   |   |   |   max_accel_1 <= 167: class4 (16.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 167
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 171: class0 (3.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 171: class4 (4.0/1.0)
+|   |   |   |   |   |   max_accel_2 > 161
+|   |   |   |   |   |   |   var_accel_2 <= 281.9816
+|   |   |   |   |   |   |   |   max_accel_3 <= 139
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 131
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 126: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 126: class9 (4.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 131: class0 (10.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 139
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 169
+|   |   |   |   |   |   |   |   |   |   median_accel_3 <= 128.5: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   median_accel_3 > 128.5
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 135: class9 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 135
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 150: class0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 150: class4 (2.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 169: class0 (3.0)
+|   |   |   |   |   |   |   var_accel_2 > 281.9816
+|   |   |   |   |   |   |   |   median_accel_2 <= 154
+|   |   |   |   |   |   |   |   |   max_accel_3 <= 152: class4 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   max_accel_3 > 152: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   median_accel_2 > 154: class8 (3.0/1.0)
+|   |   |   |   |   min_accel_2 > 129
+|   |   |   |   |   |   max_accel_2 <= 164
+|   |   |   |   |   |   |   min_accel_1 <= 128
+|   |   |   |   |   |   |   |   var_accel_3 <= 17.1179
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 120.5
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 158.24: class0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 > 158.24: class1 (2.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 120.5: class4 (10.0)
+|   |   |   |   |   |   |   |   var_accel_3 > 17.1179
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 129
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 148.42: class9 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_2 > 148.42
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 122
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 120: class8 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 120: class0 (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 122: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 129: class3 (2.0)
+|   |   |   |   |   |   |   min_accel_1 > 128
+|   |   |   |   |   |   |   |   max_accel_3 <= 118: class1 (3.0/1.0)
+|   |   |   |   |   |   |   |   max_accel_3 > 118
+|   |   |   |   |   |   |   |   |   max_accel_1 <= 137
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 133.86: class4 (4.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_1 > 133.86
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 134.06: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 134.06: class0 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   max_accel_1 > 137
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 137.77
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 148
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 130: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 130: class4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 163: class0 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 163: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 143: class4 (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 143
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 133: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 133: class6 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 153
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 163
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 124.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 138: class4 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 138
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 161: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 161: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 124.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 151: class5 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 136
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 126.5: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 126.5: class4 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 127: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 163
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 128: class4 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 153
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 135.5: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 135.5: class4 (40.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 148: class5 (3.0)
+|   |   |   |   |   |   |   |   |   |   mean_accel_3 > 137.77
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 137: class1 (3.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 137: class0 (2.0)
+|   |   |   |   |   |   max_accel_2 > 164
+|   |   |   |   |   |   |   max_accel_1 <= 148
+|   |   |   |   |   |   |   |   min_accel_3 <= 119
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 130
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 118
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 123: class1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 123: class0 (5.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 118
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 <= 20.5811
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 155: class0 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 155: class8 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 126
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 155: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 155: class8 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132: class8 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132: class5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_2 > 20.5811
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 167: class8 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 <= 113.14
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 146: class1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 146: class0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_3 > 113.14
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 183
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 163.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 112
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 <= 114.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 159.69: class8 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 159.69: class4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_1 > 114.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 113.37: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 113.37
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 153
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 162.25: class1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 162.25: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 153: class8 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 112
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 145
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 161.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 150: class8 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 150: class0 (14.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 161.5: class8 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 145: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132: class8 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 163.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 133: class0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 133: class1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 183
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 9.3779: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 9.3779: class8 (17.0/1.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 130
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 139: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 139: class0 (2.0)
+|   |   |   |   |   |   |   |   min_accel_3 > 119
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 127
+|   |   |   |   |   |   |   |   |   |   max_accel_3 <= 129
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 123: class4 (40.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 123: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_3 > 129
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 137.7
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 132
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 141: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 141: class4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 149
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 159.42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 122: class8 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125: class1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125: class8 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 159.42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 166
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 155: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 155: class4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 166
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 131.88
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 111: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 111
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 122: class0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 122: class1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 131.88
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 <= 6.7779: class0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_3 > 6.7779
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 4.94: class8 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 4.94
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 <= 135.16: class4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 135.16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 172: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 172: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 125: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 128
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 162.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 140: class1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 140: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 162.5: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 164: class8 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 132: class1 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   mean_accel_1 > 137.7
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 <= 157.96
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 143: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 143: class0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mean_accel_2 > 157.96
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 151: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 151
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 142: class4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 135: class8 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 135: class4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 145: class4 (16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 145
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 151: class0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 151: class4 (2.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 127
+|   |   |   |   |   |   |   |   |   |   min_accel_1 <= 130: class8 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_1 > 130: class1 (6.0)
+|   |   |   |   |   |   |   max_accel_1 > 148
+|   |   |   |   |   |   |   |   min_accel_1 <= 128
+|   |   |   |   |   |   |   |   |   var_accel_3 <= 93.3499
+|   |   |   |   |   |   |   |   |   |   min_accel_3 <= 119
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 <= 48.7044: class3 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   var_accel_1 > 48.7044
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 152: class8 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 152: class0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   min_accel_3 > 119: class3 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   var_accel_3 > 93.3499: class1 (3.0)
+|   |   |   |   |   |   |   |   min_accel_1 > 128
+|   |   |   |   |   |   |   |   |   median_accel_3 <= 122.5
+|   |   |   |   |   |   |   |   |   |   var_accel_3 <= 42.02
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 169: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 169: class5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   var_accel_3 > 42.02: class8 (3.0)
+|   |   |   |   |   |   |   |   |   median_accel_3 > 122.5
+|   |   |   |   |   |   |   |   |   |   max_accel_1 <= 151
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 <= 115: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   min_accel_3 > 115
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 <= 143: class6 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_2 > 143: class0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_1 > 151
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 167
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 <= 166
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 <= 127.5: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_3 > 127.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 <= 154: class0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   median_accel_2 > 154: class1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 166: class4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   max_accel_2 > 167
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 <= 136: class5 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_3 > 136: class0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 <= 138: class0 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   min_accel_1 > 138
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 <= 158: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   max_accel_1 > 158: class5 (2.0)
+|   |   |   |   var_accel_1 > 222.2859
+|   |   |   |   |   min_accel_3 <= 107: class0 (68.0/2.0)
+|   |   |   |   |   min_accel_3 > 107
+|   |   |   |   |   |   var_accel_3 <= 46.1251: class0 (2.0)
+|   |   |   |   |   |   var_accel_3 > 46.1251: class9 (5.0)
+|   |   |   min_accel_3 > 130
+|   |   |   |   max_accel_2 <= 163
+|   |   |   |   |   max_accel_3 <= 147
+|   |   |   |   |   |   min_accel_3 <= 132: class4 (2.0)
+|   |   |   |   |   |   min_accel_3 > 132: class9 (27.0/1.0)
+|   |   |   |   |   max_accel_3 > 147
+|   |   |   |   |   |   var_accel_2 <= 171.0971
+|   |   |   |   |   |   |   min_accel_1 <= 119: class9 (5.0)
+|   |   |   |   |   |   |   min_accel_1 > 119
+|   |   |   |   |   |   |   |   max_accel_1 <= 153: class3 (8.0/2.0)
+|   |   |   |   |   |   |   |   max_accel_1 > 153
+|   |   |   |   |   |   |   |   |   min_accel_3 <= 135: class3 (3.0)
+|   |   |   |   |   |   |   |   |   min_accel_3 > 135
+|   |   |   |   |   |   |   |   |   |   max_accel_2 <= 160: class0 (3.0)
+|   |   |   |   |   |   |   |   |   |   max_accel_2 > 160: class9 (2.0)
+|   |   |   |   |   |   var_accel_2 > 171.0971: class4 (2.0)
+|   |   |   |   max_accel_2 > 163
+|   |   |   |   |   median_accel_1 <= 140
+|   |   |   |   |   |   median_accel_1 <= 135.5: class1 (3.0/1.0)
+|   |   |   |   |   |   median_accel_1 > 135.5: class9 (3.0)
+|   |   |   |   |   median_accel_1 > 140
+|   |   |   |   |   |   var_accel_1 <= 19.8104
+|   |   |   |   |   |   |   min_accel_3 <= 135: class5 (2.0)
+|   |   |   |   |   |   |   min_accel_3 > 135: class1 (2.0/1.0)
+|   |   |   |   |   |   var_accel_1 > 19.8104
+|   |   |   |   |   |   |   max_accel_1 <= 152: class8 (2.0)
+|   |   |   |   |   |   |   max_accel_1 > 152: class0 (6.0)
+
+Number of Leaves  : 	1071
+
+Size of the tree : 	2141
+
+
+Time taken to build model: 1.76 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6850               70.5386 %
+Incorrectly Classified Instances      2861               29.4614 %
+Kappa statistic                          0.6607
+Mean absolute error                      0.0621
+Root mean squared error                  0.2271
+Relative absolute error                 35.7679 %
+Root relative squared error             77.0833 %
+Total Number of Instances             9711     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.574     0.06       0.549     0.574     0.561      0.789    class0
+                 0.389     0.013      0.376     0.389     0.382      0.76     class1
+                 0.803     0.038      0.771     0.803     0.786      0.901    class2
+                 0.857     0.026      0.863     0.857     0.86       0.935    class3
+                 0.445     0.042      0.473     0.445     0.458      0.744    class4
+                 0.442     0.046      0.432     0.442     0.437      0.74     class5
+                 0.751     0.028      0.783     0.751     0.767      0.894    class6
+                 0.531     0.038      0.536     0.531     0.533      0.769    class7
+                 0.404     0.011      0.392     0.404     0.398      0.769    class8
+                 0.881     0.028      0.891     0.881     0.886      0.944    class9
+Weighted Avg.    0.705     0.035      0.706     0.705     0.706      0.863
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+  633   36   66   26  109   84   28   50   29   42 |    a = class0
+   45   74   19    8   16    5    0    4   16    3 |    b = class1
+   53   19 1062   21   34   47   17   41    3   26 |    c = class2
+   42    8   25 1346   10   34   23   50    4   29 |    d = class3
+  115   20   37   14  338   96   37   44   32   27 |    e = class4
+   82   10   58   38   79  313   48   52    4   24 |    f = class5
+   34    2   21   24   45   64  863   66    7   23 |    g = class6
+   51    4   51   47   45   55   61  395    0   35 |    h = class7
+   43   16    7    4   16    4    1    2   67    6 |    i = class8
+   54    8   32   32   23   23   24   33    9 1759 |    j = class9
+
