@@ -50,21 +50,22 @@
 
 \maketitle
 \begin{abstract}
-Activity recognition solely with an accelerometer is a common investigated research topic and enables the detection of basic activities like sit, walk or stand. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the users environment and to boost activity recognition.  We present a sensor set-up that consists of an accelerometer and a capacitive proximity sensor that senses the users activity based on the combined sensor values. We show that our proposed approach improves the recognition rate significantly for detecting activities of daily living (e.g. open door, prepare dinner, etc.) by adding capacitive proximity sensor data to the inertial data.
+Activity recognition solely with an accelerometer is a common investigated research topic and enables the detection of basic activities like sitting, walking or standing. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the users environment and to boost activity recognition. This work presents a sensor prototype which consists of an accelerometer and a capacitive proximity sensor that senses the users activity based on the combined sensor values. We show that our proposed approach improves the recognition rate significantly for detecting activities of daily living (e.g. sitting, preparing dinner, eating, drinking, etc.) by adding capacitive proximity sensor data to the inertial data.
 \keywords{ambient assisted living, capacitive proximity sensors, activity recognition, user context}
 \end{abstract}
 
 \section{Introduction}
 
-Sensing a persons activity is being researched for several years now, raising even more interest in it by the advanced technology of mobile phones, which include multiple sensors and therefore enable activity recognition with such a device \cite{brezmes2009activity}. Current wearable activity recognition systems are able to unobtrusively capture and recognize a person's activities throughout the whole day. These systems often rely on inertial sensor data that is captured by wearable sensors embedded in a mobile device \cite{brezmes2009activity} or attached to the body \cite{Ravi2005} to identify the activities performed. Usually, single sensor modalities are used or duplicated to detect the activities. However, it is a great challenge to identify fine-grained activities just by using a single modality like the accelerometer. Capacitive proximity sensors on the other hand can indirectly measure the distance and nature of a grounded object within reach. This means that the measurement result depends on the object's distance, its size and the material it is made of. In this work, we show how an accelerometer and a capacitive proximity sensor can be used to improve activity recognition in activities of daily living. For this we obtained a wrist-worn activity data logger\footnote{HedgeHog Activity Logger -- \url{http://www.ess.tu-darmstadt.de/hedgehog}} and integrate a capacitive proximity sensor unobtrusively into the wristband.
+Sensing a persons activity is being researched for several years now, raising even more interest in it by the advanced technology of mobile phones, which include multiple sensors and therefore enable activity recognition with such a device \cite{brezmes2009activity}. Current wearable activity recognition systems are able to unobtrusively capture and recognize a person's activities throughout the whole day. These systems often rely on inertial sensor data that is captured by wearable sensors embedded in a mobile device \cite{brezmes2009activity} or attached to the body \cite{Ravi2005} to identify the activities performed. Usually, single sensor modalities are used or duplicated to detect the activities. However, it is a great challenge to identify fine-grained activities just by using a single modality like the accelerometer. Capacitive proximity sensors on the other hand can indirectly measure the distance and nature of a grounded object within reach. This means that the measurement result depends on the 
+object's distance, its size and the material it is made of. In this work, we show how an accelerometer and a capacitive proximity sensor can be used to improve activity recognition in activities of daily living. For this we obtained a wrist-worn activity data logger\footnote{HedgeHog Activity Logger -- \url{http://www.ess.tu-darmstadt.de/hedgehog}} and integrate a capacitive proximity sensor unobtrusively into the wristband.
 
 There are several intuitive examples for which a combination of accelerometer-based activity recognition with a capacitive proximity sensor reveals its strength. For example, it may be conducted which material is placed underneath the hand. The capacitive proximity sensor would return a different measurement result for a hand placed on a couch covered with fabric than a hand placed a wooden table. Moreover, the approximate distance to objects can be exploited to identify activities like grasping into a locker or a refrigerator to prepare food.
 
 A wristband worn capacitive proximity sensor requires a shield that eliminates the influence of the grounded arm directly underneath the sensor. Using this setup, we can detect the proximity to a grounded object in the environments for distances up to 20 cm. Especially for mobile devices, it is required that the sensor only draws a very small amount of power. Thus, other proximity sensing input modalities like ultrasound or optical measurements are not applicable for this type of mobile application.
 
-This paper is structured as follows: We give a short insight in related work in chapter 2, followed by describing the hardware set-up used for this study in chapter 3. The experiment and evaluation will be described in chapter 4, showing how data has been obtained and how activity recognition is being improved. This work is concluded in chapter 5 with an outlook to future work.
+% This paper is structured as follows: We give a short insight in related work in chapter 2, followed by describing the hardware set-up used for this study in chapter 3. The experiment and evaluation will be described in chapter 4, showing how data has been obtained and how activity recognition is being improved. This work is concluded in chapter 5 with an outlook to future work.
 
-The remainder of this paper is  is structured as follows: First, Section \ref{sect:related} is dedicated to related work work in activity recognition, in particular considering approaches with multiple sensor modalities. Section \ref{sect:hardware} will present the hardware based on which a wrist-worn sensor prototype was built, fusing together an inertial data logger and a capacitive sensor integrated in a wristband. The experimental setup, the scripted scenario with daily activities and the activity recognition evaluation results, showing the performance boost of the capacitive sensor unit, are given in Section \ref{sect:experiment}. The paper is wrapped up with a conclusions section enumerating the findings of the paper, as well as pointing out future research potential.
+The remainder of this paper is  is structured as follows: First, Section \ref{sect:related} is dedicated to related work work in activity recognition, in particular considering approaches with multiple sensor modalities. Section \ref{sect:hardware} will present the hardware based on which a wrist-worn sensor prototype was built, fusing together an inertial data logger and a capacitive sensor integrated in a wristband. The experimental setup with the scripted scenario of daily activities and the activity recognition evaluation results, showing the performance boost of the capacitive sensor unit, are given in Section \ref{sect:experiment}. The paper is wrapped up with a conclusions section enumerating the findings of the paper, as well as pointing out future research potential.
 
 
 
@@ -169,7 +170,7 @@ The classifier was trained with various features that were extracted from window
 
 In the following, the performed activities will be analyzed in detail, stating out the influence of the capacitive proximity sensor on the classification result. In general, the usage of data provided by the new modality showed improvements in recognition rates by 2.4 - 14.4 \%.
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/tobias_1.pdf}
 	\caption{While entering the door, the wristband approaches the door knob twice, while opening and closing. Regarding the capacitive proximity sensor, this situation can be observed at the beginning and at the end of the activity.}
@@ -178,7 +179,7 @@ In the following, the performed activities will be analyzed in detail, stating o
 
 The opening door activity has very poor recongition rates without the including the proximity sensor. The average f-measure could be increased from of 34.2 \% to 46.8 \%. A plot of the activity is given in Figure \ref{fig:tobias_1}. The capacitive proximity sensor shows two approaches to the door knob, one for opening the door (2 s) and one for closing the door (9 s). The acceleration sensor captures relevant data in the time in which the person moves into the room and the hand changes from the outer to the inner door knob (5 - 7 s). The recorded data for this activity shows strong correlations between all test persons. 
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/eugen_2.pdf}
 	\caption{Example of a ``sitting'' activity in which user changed his position very frequently. Throughout the whole activity the values of the proximity sensor stay constant due to the close proximity to the couch's fabric.}
@@ -189,7 +190,7 @@ After closing the door, the test persons were supposed to sit down on the couch.
 
 In the following, the test persons were supposed to lay down on the couch. Again, there were great variations in performing this activity between all participants. For example, some of them crossed their hands under their head. For that class, the average f-measure could only be increased by 2.4 \%, from 82.1 to 84.5 \%. The participants were also asked to put food and dishes from a shelf and a locker on a table. The capacitive proximity sensor captured the proximity to the shelf and to the table. The overall f-measure for this activity is quite low, but improved by 6.7 \% from 50.4 \% to 57.1\%. 
 
-\begin{figure}[htpb]
+\begin{figure}
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/eugen_5.pdf}
 	\caption{An example of the ``preparing bread'' activity, where the participants had to put marmalade on a toast. The proximity sensor indicates the closeness to the table, while the acceleration sensor shows reoccurring movements.}
@@ -198,7 +199,7 @@ In the following, the test persons were supposed to lay down on the couch. Again
 
 Figure \ref{fig:eugen_5} shows an example instance of preparing a bread with marmelade. It is notable that the acceleration data does not seem to provide any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in immediate distance. This activity showed a high improvement in the average f-measure by 10 \%, from 49.0 \% to 59.8 \%, when the capacitive proximity sensor is taken into account. 
 
-\begin{figure}[htpb]
+\begin{figure}
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/eugen_6.pdf}
 	\caption{An eating person who took 5 bites from the bread. After each bite, the hand is placed on the table.}
@@ -207,8 +208,7 @@ Figure \ref{fig:eugen_5} shows an example instance of preparing a bread with mar
 
 Considering the eating activity, the influence of the capacitive proximity sensor is very low. Some of the participants ate their bread leaving their hand close to the mouth, while others moved their hand up and down putting their bread aside on the plate. A good example of an eating activity is shown in Figure \ref{fig:eugen_6} where the participant took a few bites from the bread. The average f-measure for that activity increased slightly from 80.3 \% to 83.8 \%. 
 
-<<<<<<< HEAD
-\begin{figure}[htpb]
+\begin{figure}
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/eugen_7.pdf}
 	\caption{An example of the ``drinking'' activity of a test person. The participant first pours some water into the glass and then takes three drams of water. After each dram, he returns his arm to the table which can be observed in the characteristic patterns of the proximity sensor.}
@@ -217,7 +217,7 @@ Considering the eating activity, the influence of the capacitive proximity senso
 
 The activity drinking water is depicted in Figure \ref{fig:eugen_7}. The participant took five nips from the glass, while leaving the hands lying on the table in between. These motions can be easily detected in the acceleration as well as proximity data. The accelerometer data shows that there periodic up- and down-movements while the capacitive proximity sensor delivers data that is associated to the proximity of the table.
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/marko_8.pdf}
 	\caption{An examplary instance of the class ``walking''. The acceleration sensor and the proximity sensor show periodic reoccuring patterns that are related to the pendulum-like arm movement and the proximity to the person's body during those movements.}
@@ -226,46 +226,50 @@ The activity drinking water is depicted in Figure \ref{fig:eugen_7}. The partici
 
 Regarding the walking activity one can identify periodic changes in the acceleration as well as in the measured capacitance, illustrated in Figure \ref{fig:marko_8}. While walking, the capacitance between the wristband and the leg increases when the wristband is located close to the body and decrease when the wristband moves away. 
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/eugen_9.pdf}
 	\caption{During the sleeping activity the data from both sensors remains constant. One draw conclusions about the coverage of the arm with either couchons, blankets or the proximity to the mattress.}
 	\label{fig:eugen_9}
 \end{figure}
-=======
+
 \subsection{Evaluation Results}
 \label{sect:evaluation}
->>>>>>> bc6d4fcb6021ed9fa82fe92161cf6842c10d0386
 
 The sleeping activity was captured with an average f-measure of 83.4 \% that increased to 88.4 \% when using the capacitive proximity sensor. In this situation the capacitive proximity sensor is able to capture the surrounding couchons and blankets. The accelerometer data and the proximity data is very constant during that activity. 
 
-\begin{table}[htbp]
-	\centering	\begin{tabular}{p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}|p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}|p{2.2cm}}
-a & b & c & d & e & f & g & h & i & a & b & c & d & e & f & g & h & i & $\leftarrow$ classified as\\
-\hline
-10 & 3 & 0 & 2 & 0 & 0 & 0 & 0 & 0 		& 9 & 5 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & a = open door\\
-\hline
-2 & 259 & 4 & 2 & 4 & 2 & 4 & 0 & 0 	& 1 & 248 & 5 & 6 & 4 & 2 & 5 & 0 & 0 & b = sit\\
-\hline
-0 & 5 & 213 & 2 & 2 & 1 & 8 & 0 & 4 	& 0 & 3 & 212 & 3 & 2 & 1 & 6 & 0 & 8 & c = lying\\
-\hline
-3 & 5 & 2 & 52 & 9 & 3 & 1 & 1 & 1 		& 0 & 8 & 2 & 44 & 7 & 8 & 1 & 1 & 3 & d = get things\\
-\hline
-1 & 9 & 3 & 13 & 46 & 6 & 3 & 0 & 0 	& 1 & 7 & 1 & 11 & 37 & 9 & 2 & 0 & 10 & e = make bread\\
-\hline
-0 & 5 & 1 & 1 & 5 & 62 & 5 & 0 & 1 		& 0 & 3 & 2 & 3 & 8 & 58 & 5 & 0 & 1 & f = eat\\
-\hline
-0 & 8 & 4 & 2 & 1 & 5 & 68 & 0 & 0 		& 0 & 8 & 3 & 0 & 6 & 4 & 67 & 0 & 1 & g = drink\\
-\hline
-1 & 0 & 0 & 1 & 0 & 0 & 0 & 12 & 0 		& 1 & 0 & 0 & 1 & 0 & 0 & 0 & 13 & 0 & h = walk\\
-\hline
-1 & 0 & 0 & 7 & 0 & 0 & 0 & 0 & 325 	& 0 & 1 & 2 & 10 & 6 & 1 & 1 & 0 & 312 & i = sleep\\
-		\end{tabular}
+\begin{table}
 	\caption{Comparison of two Confusion matrices for an exemplary user. The left part includes the capacitive proximity sensor, the right part represents classification results without the sensor.}
+	
+	\setlength{\tabcolsep}{2.4pt}
+	\centering
+	
+	\begin{scriptsize}
+	\begin{tabular}%{p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}|p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}p{0.48cm}|p{2.2cm}}
+	{|ccccccccc|p{0.01cm}|ccccccccc|p{0.01cm}|l}
+		\multicolumn{9}{c}{with proximity} &\multicolumn{1}{c}{}& 
+			\multicolumn{9}{c}{without proximity} &\multicolumn{1}{c}{}&  \\ \cmidrule{1-9} \cmidrule{11-19} 
+			
+		\multicolumn{1}{c}{a} & b & c & d & e & f & g & h & \multicolumn{1}{c}{i} &\multicolumn{1}{c}{}& 
+			\multicolumn{1}{c}{a} & b & c & d & e & f & g & h & \multicolumn{1}{c}{i} 	&\multicolumn{1}{c}{}& $\leftarrow$ classified as\\
+		\cline{1-9} \cline{11-19} \cline{21-21}
+		\textbf{10} & 3 & 0 & 2 & 0 & 0 & 0 & 0 & 0 	&& \textbf{9} & 5 & 0 & 0 & 1 & 0 & 0 & 0 & 0 		&& a = open door	\\ 
+		2 & \textbf{259} & 4 & 2 & 4 & 2 & 4 & 0 & 0 	&& 1 & \textbf{248} & 5 & 6 & 4 & 2 & 5 & 0 & 0 	&& b = sitting		\\ 
+		0 & 5 & \textbf{213} & 2 & 2 & 1 & 8 & 0 & 4 	&& 0 & 3 & \textbf{212} & 3 & 2 & 1 & 6 & 0 & 8 	&& c = lying		\\ 
+		3 & 5 & 2 & \textbf{52} & 9 & 3 & 1 & 1 & 1 	&& 0 & 8 & 2 & \textbf{44} & 7 & 8 & 1 & 1 & 3 		&& d = get things	\\ 
+		1 & 9 & 3 & 13 & \textbf{46} & 6 & 3 & 0 & 0 	&& 1 & 7 & 1 & 11 & \textbf{37} & 9 & 2 & 0 & 10 	&& e = make bread	\\ 
+		0 & 5 & 1 & 1 & 5 & \textbf{62} & 5 & 0 & 1 	&& 0 & 3 & 2 & 3 & 8 & \textbf{58} & 5 & 0 & 1 		&& f = eating		\\ 
+		0 & 8 & 4 & 2 & 1 & 5 & \textbf{68} & 0 & 0 	&& 0 & 8 & 3 & 0 & 6 & 4 & \textbf{67} & 0 & 1 		&& g = drinking		\\
+		1 & 0 & 0 & 1 & 0 & 0 & 0 & \textbf{12} & 0 	&& 1 & 0 & 0 & 1 & 0 & 0 & 0 & \textbf{13} & 0 		&& h = walking		\\
+		1 & 0 & 0 & 7 & 0 & 0 & 0 & 0 & \textbf{325} 	&& 0 & 1 & 2 & 10 & 6 & 1 & 1 & 0 & \textbf{312} 	&& i = sleeping		\\ 
+		\cline{1-9} \cline{11-19} 
+	\end{tabular}
+	\end{scriptsize}
+	
 	\label{tab:ConfusionMatrixForAnExemplaryUser}
 \end{table}
 
-Table \ref{tab:confmatrix} 
+Table \ref{tab:ConfusionMatrixForAnExemplaryUser} 
 
 \section{Conclusion and Outlook}
 \label{sect:conclusions}
