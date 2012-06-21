@@ -64,25 +64,31 @@ A wristband worn capacitive proximity sensor requires a shield that eliminates t
 
 This paper is structured as follows: We give a short insight in related work in chapter 2, followed by describing the hardware set-up used for this study in chapter 3. The experiment and evaluation will be described in chapter 4, showing how data has been obtained and how activity recognition is being improved. This work is concluded in chapter 5 with an outlook to future work.
 
-\section{Related Work}
+The remainder of this paper is  is structured as follows: First, Section \ref{sect:related} is dedicated to related work work in activity recognition, in particular considering approaches with multiple sensor modalities. Section \ref{sect:hardware} will present the hardware based on which a wrist-worn sensor prototype was built, fusing together an inertial data logger and a capacitive sensor integrated in a wristband. The experimental setup, the scripted scenario with daily activities and the activity recognition evaluation results, showing the performance boost of the capacitive sensor unit, are given in Section \ref{sect:experiment}. The paper is wrapped up with a conclusions section enumerating the findings of the paper, as well as pointing out future research potential.
 
+
+
+
+\section{Related Work}
+\label{sect:related}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Activity recognition research relying on wearable sensors mostly considers inertial data from the participants body to infer performed activities, such as in the works of \cite{Ravi2005,Bao2004,Srinivasan2010,Amft2005}. The acceleration data is often augmented with data from sensors such as gyroscopes \cite{Holleczek_2010}, magnetometers \cite{Altun_2010}, ambient light \cite{Borazio2012} or ambient and skin temperature \cite{Krause_2003}, aiming at extracting more motion and environmental context of the user. Researchers in \cite{wyss2010recognition}, for example, use heart rate information additionally to the accelerometer to detect military related activities like lifting and lowering loads or even digging. In \cite{Ward_2006}, workshop assembly activities were detected by augmenting acceleration sensors with microphones.
 
-The works of \cite{Fishkin_2005} and \cite{patterson2005fga} show that detecting objects the user touches or uses can be very helpful for activity recognition, including activities of daily living \cite{phealth:maja} and \cite{Philipose_2004}, activity tracking in car manufacturing \cite{Stiefmeier08}, etc. Berlin et al. \cite{berlin_laerhoven_tei_2010} have augmented a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with, aiming both at household as well as gardening activities.
+The works of \cite{Fishkin_2005} and \cite{patterson2005fga} show that detecting objects the user touches or uses can be very helpful for activity recognition. By using RFID readers that are embedded in gloves or bracelets at the wrist and RFID tags attached to various objects of interest, one can detect the object grasped and used by the user, thus aiding the activity recognition in various application scenarios, such as activities of daily living \cite{phealth:maja} and \cite{Philipose_2004}, activity tracking in car manufacturing \cite{Stiefmeier08}, or household and gardening activities \cite{berlin_laerhoven_tei_2010}. 
 
+Our approach to enhance the inertial data from a wearable sensor is quite similar to the RFID scenarios just mentioned, as it also relies on a single wearable sensor and thus is aiming at an unobtrusive deployment. The main difference lies in the fact that we do not need accurate detection of tagged objects, but are only interested in the proximity to various objects which, as we expect, could boost activity recognition.
 
-% physical activities with accelerometers detected via motifs \cite{minnen_2006}
+% While the RFID gloves or bracelets might not have reached user acceptance, and deploying tags in the user's home might appear cumbersome and still quite intrusive, our approach considers a single wrist-worn sensor unit consisting of an accelerometer and proximity sensor.
+% Berlin et al. \cite{berlin_laerhoven_tei_2010} have also fused and benchmarked a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with, aiming both at household as well as gardening activities.
 
-% detection of eating and drinking activities from acceleration sensors \cite{Amft2005}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Images/modes.pdf}
-	\caption{Three different capacitive proximity sensing modes can be distinguished. The sensing electrodes build up an electric field to objects in the environment, illustrated with a cloud. \cite{Smith1996}}
+	\caption{Three different capacitive proximity sensing modes can be distinguished \cite{Smith1996}. The sensing electrodes build up an electric field to objects in the environment, illustrated with a cloud.}
 	\label{fig:modes}
 \end{figure}
 
@@ -95,6 +101,7 @@ In previous works, capacitive proximity sensors were applied in various fields o
 
 
 \section{Hardware}
+\label{sect:hardware}
 This section presents the two components of the required hardware, the wrist-worn activity data logger tailored to capture acceleration data, and the capacitive proximity sensor used for distance measurements.
 
 \subsection{Activity Data Logger}
@@ -122,7 +129,8 @@ The capacitive proximity sensor performs measurements in loading mode. Two elect
 	\label{fig:schematic}
 \end{figure}
 
-The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly affected by the grounded underlying arm.
+The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly 
+affected by the grounded underlying arm.
 
 \begin{figure}
 	\centering
@@ -143,6 +151,7 @@ Figure \ref{fig:cap_sensor} shows the the wrist-worn prototype used in the evalu
 Figure \ref{fig:pseudocode} illustrates the operations required for a measurement cycle. The proximity sensor board generates a clock signal with varying frequency depending on the charge and discharge cycles. The HedgeHog measures the resulting capacitance by counting the signal's edges over a gate time of approximately 9.5ms. During that counting phase, the HedgeHog is sent to sleep in order to reduce power consumption. In the following, the HedgeHog applies run-length encoding on the measured data to reduce overhead and periodically logs the data to the integrated SD card.
 
 \section{Experiment}
+\label{sect:experiment}
 
 This section presents the experimental setup including the activities and the participants, as well as the findings that were obtained during the evaluation.
 
@@ -198,6 +207,7 @@ Figure \ref{fig:eugen_5} shows an example instance of preparing a bread with mar
 
 Considering the eating activity, the influence of the capacitive proximity sensor is very low. Some of the participants ate their bread leaving their hand close to the mouth, while others moved their hand up and down putting their bread aside on the plate. A good example of an eating activity is shown in Figure \ref{fig:eugen_6} where the participant took a few bites from the bread. The average f-measure for that activity increased slightly from 80.3 \% to 83.8 \%. 
 
+<<<<<<< HEAD
 \begin{figure}[htpb]
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/eugen_7.pdf}
@@ -222,6 +232,10 @@ Regarding the walking activity one can identify periodic changes in the accelera
 	\caption{During the sleeping activity the data from both sensors remains constant. One draw conclusions about the coverage of the arm with either couchons, blankets or the proximity to the mattress.}
 	\label{fig:eugen_9}
 \end{figure}
+=======
+\subsection{Evaluation Results}
+\label{sect:evaluation}
+>>>>>>> bc6d4fcb6021ed9fa82fe92161cf6842c10d0386
 
 The sleeping activity was captured with an average f-measure of 83.4 \% that increased to 88.4 \% when using the capacitive proximity sensor. In this situation the capacitive proximity sensor is able to capture the surrounding couchons and blankets. The accelerometer data and the proximity data is very constant during that activity. 
 
@@ -254,6 +268,7 @@ a & b & c & d & e & f & g & h & i & a & b & c & d & e & f & g & h & i & $\leftar
 Table \ref{tab:confmatrix} 
 
 \section{Conclusion and Outlook}
+\label{sect:conclusions}
 
 We have shown that current wearable inertial sensing devices for activity recognition can be significantly enhanced by integrating a capacitive proximity sensor into the wristband. Regarding the classification accuracy, we obtained an overall increase in correctly classified instances of TODO percent. Some classes, for instance ``preparing bread'' and ``drinking'', could benefit very much from proximity-related sensor data. For such classes the classification performance could be boosted by up to TODO percent. 
 
@@ -262,6 +277,7 @@ The classification results could be improved by the usage of more than one sensi
 Capacitive proximity sensors represent a suitable new input modality for future activity recognition systems. The low power consumption as well as the invisible integration of a sensor into the wristband meets an essential requirement of wearable applications. Especially in AAL environments, these systems can help monitoring the course of chronic diseases by recognizing activities of daily life. This may improve the quality of life of persons affected and their caregivers. 
 
 \section*{Acknowledgments}
+
 We would like to thank our evaluation participants from TU Darmstadt and Fraunhofer IGD.
 
 % \newpage
