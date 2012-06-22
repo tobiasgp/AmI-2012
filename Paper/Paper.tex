@@ -18,9 +18,9 @@
 \title{Enhancing Accelerometer-based Activity Recognition with Capacitive Proximity Sensing}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{Enhancing Accelerometer-based Activity Recognition}
+\titlerunning{Enhancing Accelerometer-based Activity Recognition with Proximity Sensing}
 % (feature abused for this document to repeat the title also on left hand pages)
-\authorrunning{Enhancing Accelerometer-based Activity Recognition}
+\authorrunning{Enhancing Accelerometer-based Activity Recognition with Proximity Sensing}
 
 % the name(s) of the author(s) follow(s) next
 % \author{Tobias Grosse-Puppendahl\inst{1} \and Eugen Berlin\inst{2} \and Marko Borazio\inst{2} }
@@ -50,7 +50,7 @@
 
 \maketitle
 \begin{abstract}
-Activity recognition with an accelerometer is a common investigated research topic and enables the detection of basic activities like sitting, walking or standing. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the users environment and to boost activity recognition. This work presents a sensor prototype which consists of an accelerometer and a capacitive proximity sensor that senses the users activity based on the combined sensor values. We show that our proposed approach significantly improves the recognition rate for detecting activities of daily living (e.g. sitting, preparing dinner, eating, drinking, etc.) by adding capacitive proximity sensor data to the inertial data.
+Activity recognition with an accelerometer is a common investigated research topic and enables the detection of basic activities like sitting, walking or standing. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the user's environment to boost activity recognition. This work presents a sensor prototype consisting of an accelerometer and a capacitive proximity sensor that senses the user's activities based on the combined sensor values. We show that our proposed approach significantly improves the recognition rate for detecting activities of daily living (e.g. sitting, preparing dinner, eating, drinking, etc.) by adding capacitive proximity sensor data to the inertial data.
 \keywords{activity recognition, capacitive proximity sensors, ambient assisted living, user context}
 \end{abstract}
 
@@ -76,7 +76,7 @@ Activity recognition research relying on wearable sensors mostly considers inert
 
 The works of Fishkin et al. \cite{Fishkin_2005} and Patterson et al. \cite{patterson2005fga} show that detecting touched and used objects can be very helpful for activity recognition. By using RFID readers that are embedded in gloves or bracelets at the wrist and RFID tags attached to various objects of interest, one can detect the object grasped and used by the user, thus aiding the activity recognition in various application scenarios, such as activities of daily living \cite{phealth:maja} and \cite{Philipose_2004}, activity tracking in car manufacturing \cite{Stiefmeier08}, or household and gardening activities \cite{berlin_laerhoven_tei_2010}. 
 
-Our approach to enhance the inertial data from a wearable sensor is comparable to the RFID scenarios just mentioned, as it also relies on a single wearable sensor and an unobtrusive deployment. The main difference lies in the fact that we do not consider an accurate detection of tagged objects, but the proximity to various objects and the environment. 
+Our approach to enhance the inertial data from a wearable sensor is comparable to the RFID scenarios just mentioned, as it also relies on a single wearable sensor and an unobtrusive deployment. The main difference lies in the fact that we do not consider an accurate detection of tagged objects, but the proximity to various unknown objects and the environment. 
 
 % While the RFID gloves or bracelets might not have reached user acceptance, and deploying tags in the user's home might appear cumbersome and still quite intrusive, our approach considers a single wrist-worn sensor unit consisting of an accelerometer and proximity sensor.
 % Berlin et al. \cite{berlin_laerhoven_tei_2010} have also fused and benchmarked a wrist-worn accelerometer sensor node with an RFID bracelet to be able to detect objects a human is interacting with, aiming both at household as well as gardening activities.
@@ -105,12 +105,12 @@ The HedgeHog sensor \cite{hedgehog} is a custom designed wearable data logger ai
 
 %  (PIC18F46J50) (ADXL345) 
 
-The sensor node itself is built around the low-power Microchip microcontroller featuring an accelerometer sensor to capture human motion, light and ambient temperature sensors and a microSD flash card for locally storing the sensor data. The sensor is powered by a $200mAh$ lithium polymer battery, which allows for two weeks of continuous recording on a single battery charge. A USB port is used to configure the sensor (e.g. setting the sensitivity of the accelerometer), to access the stored sensor data, and to recharge the battery. A plastic case nicely packages and protects the sensor to be worn at the wrist (Figure \ref{fig:sensornode}).
+The sensor node itself is built around the low-power Microchip microcontroller (PIC18F46J50) featuring an accelerometer sensor (ADXL345) to capture human motion, light and ambient temperature sensors and a microSD flash card for locally storing the sensor data. The sensor is powered by a $200mAh$ lithium polymer battery, which allows for two weeks of continuous recording on a single battery charge. A USB port is used to configure the sensor (e.g. setting the sensitivity of the accelerometer), to access the stored sensor data, and to recharge the battery. A plastic case nicely packages and protects the sensor to be worn at the wrist (Figure \ref{fig:sensornode}).
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{Images/hardware_sensor_2.jpg}
-	\caption{The inertial data logger featuring a low-power microcontroller, a 3 axis accelerometer, a microSD flash card for storing the sensor data and a USB connector for accessing the data (on the right) is powered by a small lithium polymer battery and is packaged into a plastic case to be worn at the wrist (a version with a OLED display).}
+	\caption{The inertial data logger featuring a low-power microcontroller, a 3 axis accelerometer, a microSD flash card for storing the sensor data and a USB connector for accessing the data (on the right) is powered by a small lithium polymer battery and is packaged into a plastic case to be worn at the wrist (a version with an OLED display).}
 	\label{fig:sensornode}
 \end{figure}
 
@@ -119,7 +119,7 @@ The HedgeHog can be extended with further sensors tailoring different applicatio
 
 \subsection{Capacitive Proximity Sensor}
 
-A wrist-worn capacitive proximity sensor requires a shield that eliminates the influence of the grounded arm directly underneath the sensor. Using this setup, we can detect the proximity to a grounded object in the environments for distances up to 20 cm. Especially for mobile devices, it is required that the sensor only draws a very small amount of power. Thus, other proximity sensing input modalities like ultrasound or optical measurements are not applicable for this type of mobile application.
+A wrist-worn capacitive proximity sensor requires a shield that eliminates the influence of the grounded arm directly underneath the sensor. Using this setup, we can detect the proximity to a grounded object in the environments for distances up to 20cm. Especially for mobile devices, it is required that the sensor draws a very small amount of power. Thus, other proximity sensing input modalities like ultrasound or optical measurements are not applicable for this type of mobile application.
 
 The capacitive proximity sensor performs measurements in loading mode. Two electrodes are integrated into the wristband, one sensing electrode and one shielding electrode. The sensor draws a supply current of 1mA at 3.3V when active and qualifies it for wearable proximity sensing applications. In the following a virtual capacitor denotes the capacitance between the sensing electrode and the environment. The capacitance of the sensing electrode to environmental objects increases with closer distances.
 % The capacitive proximity sensor performs measurements in loading mode. Two electrodes are integrated into the wristband, one sensing electrode and one shielding electrode that aims to eliminate the influence of the underlying skin. Without shielding no meaningful measurements could be performed, since the arm's skin is a very proximate grounded object to the sensing electrode. The sensor draws a supply current of 1mA at 3.3V when active and qualifies it for wearable proximity sensing applications. In the following a virtual capacitor denotes the capacitance between the sensing electrode and the environment. The capacitance of the sensing electrode to environmental objects increases with closer distances.
@@ -132,20 +132,19 @@ The capacitive proximity sensor performs measurements in loading mode. Two elect
 \end{figure}
 
 The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa.
-Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly 
-affected by the grounded underlying arm.
+Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the capacitance between the two electrodes is negligible. Using this shielding method, the measured capacitance will only be slightly affected by the grounded underlying arm.
 
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=\textwidth]{Images/capacitive_sensor_wristband_2.jpg}
-	\caption{The hardware prototype at a glance: HedgeHog activity logger at the lower right, the capacitive sensor unit at the lower left, and the wristband with the sensing and the shield electrodes on-top each other covered with adhesive tape for isolation purposes.}
+	\caption{The hardware prototype at a glance: HedgeHog activity logger at the lower right, the capacitive sensor unit at the lower left, and the wristband with the sensing and the shield electrodes on-top each other. The electrodes are covered with adhesive tape for isolation purposes.}
 	\label{fig:cap_sensor}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
  		\includegraphics[trim=1cm 1cm 1cm 1cm,clip,width=\textwidth]{Images/pseudocode.pdf}
-	\caption{Measurement procedure carried out by the HedgeHog sensor: using the microcontroller's Timer0 module in counting mode, the oscillating signal generated by the capacitive sensor circuit can be measured by counting the frequency pulses over a predefined gate time of approximately 9.5ms.}
+	\caption{Overview of the measurement procedure carried out by the HedgeHog sensor: using the microcontroller's Timer0 module in counting mode, the oscillating signal generated by the capacitive sensor circuit can be measured by counting the frequency pulses over a predefined gate time of approximately 9.5ms.}
 	\label{fig:pseudocode}
 \end{figure}
 
@@ -161,7 +160,7 @@ This section presents the experimental setup including the activities and the pa
 
 \subsection{Setup and Scenario}
 
-The experiment setup aims to depict a typical scenario of person in daily life. Especially in the field of Ambient Assisted Living (AAL), it is desired to monitor activities like drinking, preparing lunch and sleeping. A fine-grained monitoring of such activities may help elderly or people suffering from mental diseases to maintain a healthy day/night rhythm and take action if irregularities occur. Figure \ref{fig:cap_sensor} shows the modified HedgeHog activity logger that has been extended with a capacitive proximity sensor. The wristband has two electrodes, a sensing electrode underneath a slightly bigger shield electrode. 
+The experiment setup aims to depict a typical scenario of a person in daily life. Especially in the field of Ambient Assisted Living (AAL), it is desired to monitor activities like drinking, preparing lunch and sleeping. A fine-grained monitoring of such activities may help elderly or people suffering from mental diseases to maintain a healthy day/night rhythm and take action if irregularities occur. Figure \ref{fig:cap_sensor} shows the modified HedgeHog activity logger that has been extended with a capacitive proximity sensor. The wristband has two electrodes, a sensing electrode underneath a slightly bigger shield electrode. 
 
 The recorded test set contains the following activities: opening door, sitting on a couch, lying on a couch, putting kitchen equipments from a shelf and out of a locker, preparing a bread with marmalade, eating the bread, pouring and drinking water, walking and sleeping. The relations of these activities to environmental objects are given in Table \ref{tab:activities}. Some of those activities are very hard to recognize when the data is limited to a single modality like a 3D accelerometer. For example, sitting at the table and sitting on a couch are very similar activities. We aim to show that the data basis can be significantly improved by the additional input modality. 
 
@@ -209,7 +208,7 @@ The opening door activity has very poor recognition rates without the data from 
 \begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/eugen_2.pdf}
-	\caption{Example of a ``sitting'' activity in which the user moved his hands quite frequently (bottom plot). Most of the time the values of the proximity sensor stay more or less constant, probably due to the hands position on the couch's fabric. The sharp peak in the capacitive sensor data (upper plot) occurred when the participant scratched the back of his head. }
+	\caption{Example of the ``sitting'' activity in which the user moved his hands quite frequently (bottom plot). Most of the time the values of the proximity sensor stay more or less constant, probably due to the hands position on the couch's fabric. The sharp peak in the capacitive sensor data (upper plot) occurred when the participant scratched the back of his head. }
 	\label{fig:sitting}
 \end{figure}
 
@@ -225,7 +224,7 @@ In the following, the participant were instructed to lie  down on the couch. Aga
 \end{figure}
 
 After that, the participants were asked to walk over to the kitchen and to put food and dishes from a shelf and a locker on the table. This activity involved direct interactions with various objects as well as proximity to furniture in the room (see Table \ref{tab:activities}). The capacitive proximity sensor was able to capture the proximity to the shelf and to the table. The average F-measure for this activity is rather low, but improved by 6.8\% from 53.8\% to 60.6\%. 
-The worst performing participants for this activity reached an F-measure of 46.8\% without and 53.5\% with the capacitive sensor, while the best performing one reached 62.0\% and 64.5\% respectively. The quite low performance figures result from confusions with other activities, with a higher tendency to the ``prepare bread'' activity across all participants. This is most likely due to various objects involved in both activities. The capacitive sensor modality has a much more positive impact reducing the confusion with other activities.
+The worst performing participants for this activity reached an F-measure of 46.8\% without and 53.5\% with the capacitive sensor, while the best performing one reached 62.0\% and 64.5\% respectively. The low performance results from confusions with other activities, with a higher tendency to the ``prepare bread'' activity across all participants. This is most likely due to various objects involved in both activities. The capacitive sensor modality has a much more positive impact reducing the confusion with other activities.
 
 \begin{figure}
 	\centering
@@ -243,7 +242,7 @@ Figure \ref{fig:prep_bread} shows an example instance of preparing a bread with 
 	\label{fig:eating}
 \end{figure}
 
-When considering the eating activity, the impact of the new capacitive proximity sensor on the classification performance is quite low, as the chosen features are able to distinguish it from other activities. Some of the participants ate their bread leaving their hand close to the mouth, while others moved their hand up and down putting their bread aside on the plate, which also results in the performance range from 71.2 to 88.1\% without and 77.5 to 90.6\% with the proximity data. A good example of an eating activity is shown in Figure \ref{fig:eating}, where the participant took a few bites from the bread while putting it down every time. The average F-measure for that activity increased slightly by 2.7\% (from 79.5\% to 82.2\%). 
+When considering the eating activity, the impact of the new capacitive proximity sensor on the classification performance is quite low, as the chosen features are able to distinguish it from other activities. Some of the participants ate their bread leaving their hand close to the mouth, while others moved their hand up and down putting their bread aside on the plate, which also results in the performance range from 71.2 to 88.1\% without and 77.5 to 90.6\% with the proximity data. An example of an eating activity is shown in Figure \ref{fig:eating}, where the participant took a few bites from the bread while putting it down every time. The average F-measure for that activity increased slightly by 2.7\% (from 79.5\% to 82.2\%). 
 
 \begin{figure}[t]
 	\centering
@@ -261,7 +260,7 @@ The activity ``drinking water'' is depicted in Figure \ref{fig:drinking}. The pa
 	\label{fig:walking}
 \end{figure}
 
-Regarding the walking activity one can identify periodic changes in the acceleration as well as in the measured capacitance, illustrated in Figure \ref{fig:walking}. While walking, the capacitance between the wristband and the leg increases when the wristband is located close to the body and decrease when the wristband moves away. There were problems in distinguishing this activity from get things that could be bettered by using the new input modality. The classification improvement for this activity accounts to 12.2\% boosting the average F-measure from 41.7\% without to 53.9\% with the new sensor. Due to the low performance results and the characteristic periodic signal shape, it would help to consider frequency domain features, as it is often applied in related work.
+Regarding the walking activity one can identify periodic changes in the acceleration as well as in the measured capacitance, illustrated in Figure \ref{fig:walking}. While walking, the capacitance between the wristband and the leg increases when the wristband is located close to the body and decrease when the wristband moves away. There were problems distinguishing this activity from ``get things'' that could be improved by using the new input modality. The classification improvement for this activity accounts to 12.2\% boosting the average F-measure from 41.7\% without to 53.9\% with the new sensor. Due to the low performance results and the characteristic periodic signal shape, it would help to consider frequency domain features, as it is often applied in related work.
 
 \begin{figure}[t]
 	\centering
@@ -318,7 +317,7 @@ With this proof of concept we show that the proximity information can provide an
 
 The classification results could also be improved by using more than one sensing electrode in the wristband. For example, the wristband could integrate up to four electrodes that are placed on each side of the arm. However, this will lead to smaller electrode surfaces thus resulting in a decreased sensing distance. The sensor's power consumption can be decreased by shorter measurement windows and the choice of more energy efficient hardware components as well as software implementation. Measuring pulse width lengths instead of counting the number of pulses of the sensor's signal may reduce the required time needed for a measurement, thus increasing the time the microcontroller is able to sleep.
 
-Capacitive proximity sensors represent a suitable new input modality for future activity recognition systems. The low power consumption as well as the invisible integration of a sensor into the wristband meets an essential requirement of wearable applications. Especially in AAL environments, these systems can help monitoring the course of chronic diseases by recognizing activities of daily life. This may improve the quality of life of persons affected and their caregivers. 
+Capacitive proximity sensors represent a suitable new input modality for future activity recognition systems. The low power consumption as well as the invisible integration of a sensor into the wristband meets an essential requirement of wearable and unobtrusive applications. Especially in AAL environments, these systems can help monitoring the course of chronic diseases by recognizing activities of daily life. This may improve the quality of life of persons affected and their caregivers. 
 
 \section*{Acknowledgments}
 
