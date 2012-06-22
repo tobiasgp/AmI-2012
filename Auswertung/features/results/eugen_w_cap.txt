@@ -2,7 +2,7 @@
 
 Scheme:weka.classifiers.functions.LibSVM -S 0 -K 0 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.0010 -P 0.1
 Relation:     capsense
-Instances:    1763
+Instances:    1875
 Attributes:   21
               min_accel_1
               min_accel_2
@@ -31,46 +31,46 @@ Test mode:4-fold cross-validation
 
 LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
 
-Time taken to build model: 364.3 seconds
+Time taken to build model: 389.33 seconds
 
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances        1210               68.633  %
-Incorrectly Classified Instances       553               31.367  %
-Kappa statistic                          0.6264
-Mean absolute error                      0.0627
-Root mean squared error                  0.2505
-Relative absolute error                 37.0053 %
-Root relative squared error             86.0492 %
-Total Number of Instances             1763     
+Correctly Classified Instances        1124               59.9467 %
+Incorrectly Classified Instances       751               40.0533 %
+Kappa statistic                          0.5264
+Mean absolute error                      0.0801
+Root mean squared error                  0.283 
+Relative absolute error                 46.5752 %
+Root relative squared error             96.5302 %
+Total Number of Instances             1875     
 
 === Detailed Accuracy By Class ===
 
                TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
-                 0.573     0.065      0.488     0.573     0.527      0.754    class0
-                 0.5       0.012      0.462     0.5       0.48       0.744    class1
-                 0.656     0.058      0.678     0.656     0.667      0.799    class2
-                 0.624     0.015      0.888     0.624     0.733      0.804    class3
-                 0.333     0.02       0.393     0.333     0.361      0.657    class4
-                 0.511     0.005      0.719     0.511     0.597      0.753    class5
-                 0.914     0.02       0.905     0.914     0.909      0.947    class6
-                 0.503     0.024      0.658     0.503     0.57       0.74     class7
-                 0.296     0.006      0.421     0.296     0.348      0.645    class8
-                 0.813     0.147      0.627     0.813     0.708      0.833    class9
-Weighted Avg.    0.686     0.059      0.7       0.686     0.685      0.814
+                 0.287     0.026      0.527     0.287     0.371      0.63     class0
+                 0.444     0.011      0.444     0.444     0.444      0.717    class1
+                 0.366     0.049      0.561     0.366     0.443      0.658    class2
+                 0.559     0.018      0.843     0.559     0.672      0.77     class3
+                 0.604     0.024      0.609     0.604     0.606      0.79     class4
+                 0.723     0.018      0.717     0.723     0.72       0.853    class5
+                 0.874     0.064      0.725     0.874     0.793      0.905    class6
+                 0.389     0.037      0.479     0.389     0.43       0.676    class7
+                 0.296     0.004      0.5       0.296     0.372      0.646    class8
+                 0.786     0.228      0.493     0.786     0.606      0.779    class9
+Weighted Avg.    0.599     0.078      0.614     0.599     0.587      0.761
 
 === Confusion Matrix ===
 
    a   b   c   d   e   f   g   h   i   j   <-- classified as
-  98  11   5   6   7   2   6   5   3  28 |   a = class0
-   9  18   3   0   1   0   0   0   3   2 |   b = class1
-  19   1 181   1   2   1   2   3   0  66 |   c = class2
-   8   0  41 174   1   0   0   6   0  49 |   d = class3
-  21   2   6   0  22   3   4   3   2   3 |   e = class4
-  10   0   1   0   7  23   0   1   3   0 |   f = class5
-   1   0   0   0   4   0 276   6   0  15 |   g = class6
-  10   0  10   8   1   1  11  75   0  33 |   h = class7
-   3   5   2   0   6   0   0   0   8   3 |   i = class8
-  22   2  18   7   5   2   6  15   0 335 |   j = class9
+  49   9  14  15  14  15  12  10   1  32 |   a = class0
+   1  16   1   0   5   0   0   1   4   8 |   b = class1
+   5   0 101   1   2   0   7  18   0 142 |   c = class2
+   3   2  29 156   0   0   1   5   0  83 |   d = class3
+  13   5   6   1  67   1   8   6   1   3 |   e = class4
+   1   0   0   0   0  81  20  10   0   0 |   f = class5
+   0   0   3   0   1   7 264   9   0  18 |   g = class6
+   8   0   7   0   5   9  17  58   0  45 |   h = class7
+   2   1   3   0  11   0   0   0   8   2 |   i = class8
+  11   3  16  12   5   0  35   4   2 324 |   j = class9
 
