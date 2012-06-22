@@ -129,8 +129,7 @@ The capacitive proximity sensor performs measurements in loading mode. Two elect
 	\label{fig:schematic}
 \end{figure}
 
-The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly 
-affected by the grounded underlying arm.
+The sensing circuit schematic is shown in Figure \ref{fig:schematic}. It is based on a timer that controls the charging and discharging cycles of the virtual capacitor that is built by the sensing electrode and the surrounding environment. The timer toggles from charge to discharge at the time when a threshold voltage at the capacitor is reached. This results in an astable operation with succeeding charge/discharge cycles. When the capacitance of the virtual capacitor increases, the charging time will also increase and vice-versa. Therefore, the capacitance is inversely proportional to the number of charging cycles in a given time span. In order to guard the sensor from measuring the capacitance to underlying objects, a shield electrode is placed directly underneath the measuring electrode. The shield is driven with the same potential as the sensing electrode, such that the the capacitance between the two electrodes is negligible. Using this shielding method the measured capacitance will only be slightly affected by the grounded underlying arm.
 
 \begin{figure}
 	\centering
@@ -166,6 +165,7 @@ In order to evaluate if capacitive proximity sensors in wrist-bands can enhance 
 The classifier was trained with various features that were extracted from windows with the length of 1 second. It turned out that greater window sizes do not provide better results. In order to suppress noise contained in the capacitive proximity sensing data, we applied a moving average filter with a kernel size of 10. The final feature set contained the arithmetic mean, min, max, median and standard variance of both accelerometer and proximity data. These simple feature types represent standard features applied in activity recognition. 
 
 \subsection{Evaluation Results}
+\label{sect:evaluation}
 
 In the following, the performed activities will be analyzed in detail, stating out the influence of the capacitive proximity sensor on the classification result. In general, the usage of data provided by the new modality showed improvements in recognition rates by 2.4 - 14.4 \%.
 
@@ -176,7 +176,7 @@ In the following, the performed activities will be analyzed in detail, stating o
 	\label{fig:tobias_1}
 \end{figure}
 
-The opening door activity has very poor recongition rates without the including the proximity sensor. The average f-measure could be increased from of 34.2 \% to 46.8 \%. A plot of the activity is given in Figure \ref{fig:tobias_1}. The capacitive proximity sensor shows two approaches to the door knob, one for opening the door (2 s) and one for closing the door (9 s). The acceleration sensor captures relevant data in the time in which the person moves into the room and the hand changes from the outer to the inner door knob (5 - 7 s). The recorded data for this activity shows strong correlations between all test persons. 
+The opening door activity has very poor recongition rates without the including the proximity sensor. The average f-measure could be increased from of 34.2 \% to 46.8 \%. A plot of the activity is given in Figure \ref{fig:tobias_1}. The capacitive proximity sensor shows two approaches to the door knob, one for opening the door (2 s) and one for closing the door (9 s). The acceleration sensor captures relevant data in the time in which the person moves into the room and the hand changes from the outer to the inner door knob (5 - 7 s). The recorded data for this activity shows strong correlations between all test persons. The confusion matrices show that the open door activity was often mixed up with the sitting activity because of the horizontal orientation of the hand. Due to the usage of the capacitive sensor, the recall for that class and confusion with the sitting activity improved. 
 
 \begin{figure}[htbp]
 	\centering
@@ -187,7 +187,9 @@ The opening door activity has very poor recongition rates without the including 
 
 After closing the door, the test persons were supposed to sit down on the couch. It turned out that there are great variations of the sitting posture and the corresponding hand positions. Many users tapped with their fingers or hands while sitting, and changed their sitting positions very frequently as shown in Figure \ref{fig:eugen_2}. In this case, it is obvious that the data from the acceleration sensor is very difficult to interprete as there are numerous changes in the axial orientation of the sensor. However, the capacitive proximity sensor is able to indicate when a hand is placed on the surface of the couch. Especially for this test person, the f-measure increased from 27.4 \% to 66.7 \%, while the average f-measure improved from 68.1 \% to 77.6 \%. 
 
-In the following, the test persons were supposed to lay down on the couch. Again, there were great variations in performing this activity between all participants. For example, some of them crossed their hands under their head. For that class, the average f-measure could only be increased by 2.4 \%, from 82.1 to 84.5 \%. The participants were also asked to put food and dishes from a shelf and a locker on a table. The capacitive proximity sensor captured the proximity to the shelf and to the table. The overall f-measure for this activity is quite low, but improved by 6.7 \% from 50.4 \% to 57.1\%. 
+In the following, the test persons were supposed to lay down on the couch. Again, there were great variations in performing this activity between all participants. For example, some of them crossed their hands under their head. For that class, the average f-measure could only be increased by 2.4 \%, from 82.1 to 84.5 \%. Considering some test persons, this class was confused with the make bread activity and could be improved by the proximity sensor. 
+
+The participants were also asked to put food and dishes from a shelf and a locker on a table. The capacitive proximity sensor captured the proximity to the shelf and to the table. The overall f-measure for this activity is rather low, but improved by 6.7 \% from 50.4 \% to 57.1\%. Reasons???
 
 \begin{figure}[htpb]
 	\centering
@@ -196,7 +198,7 @@ In the following, the test persons were supposed to lay down on the couch. Again
 	\label{fig:eugen_5}
 \end{figure}
 
-Figure \ref{fig:eugen_5} shows an example instance of preparing a bread with marmelade. It is notable that the acceleration data does not seem to provide any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in immediate distance. This activity showed a high improvement in the average f-measure by 10 \%, from 49.0 \% to 59.8 \%, when the data delivered by the capacitive proximity sensor is taken into account. 
+Figure \ref{fig:eugen_5} shows an example instance of preparing a bread with marmelade. It is notable that the acceleration data does not seem to provide any characteristic patterns, while the proximity sensor indicates a table, plate, or other objects in immediate distance. This activity showed a high improvement in the average f-measure by 10 \%, from 49.0 \% to 59.8 \%, when the data delivered by the capacitive proximity sensor is taken into account. The making bread class was often confused with the sitting class. Using the new input modality, this confusion could be improved.
 
 \begin{figure}[htpb]
 	\centering
@@ -223,7 +225,7 @@ The activity drinking water is depicted in Figure \ref{fig:eugen_7}. The partici
 	\label{fig:marko_8}
 \end{figure}
 
-Regarding the walking activity one can identify periodic changes in the acceleration as well as in the measured capacitance, illustrated in Figure \ref{fig:marko_8}. While walking, the capacitance between the wristband and the leg increases when the wristband is located close to the body and decrease when the wristband moves away. 
+Regarding the walking activity one can identify periodic changes in the acceleration as well as in the measured capacitance, illustrated in Figure \ref{fig:marko_8}. While walking, the capacitance between the wristband and the leg increases when the wristband is located close to the body and decrease when the wristband moves away. There were problems in distinguishing this activity from get things that could be bettered by using the new input modality. 
 
 \begin{figure}[htbp]
 	\centering
@@ -231,9 +233,6 @@ Regarding the walking activity one can identify periodic changes in the accelera
 	\caption{During the sleeping activity the data from both sensors remains constant. One draw conclusions about the coverage of the arm with either couchons, blankets or the proximity to the mattress.}
 	\label{fig:eugen_9}
 \end{figure}
-=======
-\subsection{Evaluation Results}
-\label{sect:evaluation}
 
 The sleeping activity was captured with an average f-measure of 83.4 \% that increased to 88.4 \% when using the capacitive proximity sensor. In this situation the capacitive proximity sensor is able to capture the surrounding couchons and blankets. The accelerometer data and the proximity data is very constant during that activity. 
 
