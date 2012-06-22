@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:weka.classifiers.functions.LibSVM -S 0 -K 0 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.0010 -P 0.1
+Relation:     capsense
+Instances:    1537
+Attributes:   16
+              min_accel_1
+              min_accel_2
+              min_accel_3
+              max_accel_1
+              max_accel_2
+              max_accel_3
+              mean_accel_1
+              mean_accel_2
+              mean_accel_3
+              median_accel_1
+              median_accel_2
+              median_accel_3
+              var_accel_1
+              var_accel_2
+              var_accel_3
+              class
+Test mode:4-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 28.77 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1237               80.4815 %
+Incorrectly Classified Instances       300               19.5185 %
+Kappa statistic                          0.7666
+Mean absolute error                      0.0434
+Root mean squared error                  0.2083
+Relative absolute error                 23.1101 %
+Root relative squared error             67.9992 %
+Total Number of Instances             1537     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.607     0.006      0.654     0.607     0.63       0.801    class1
+                 0.932     0.005      0.952     0.932     0.942      0.964    class2
+                 0.925     0.025      0.908     0.925     0.917      0.95     class3
+                 0.615     0.028      0.658     0.615     0.636      0.794    class4
+                 0.608     0.061      0.563     0.608     0.585      0.773    class5
+                 0.889     0.092      0.723     0.889     0.797      0.899    class6
+                 0.196     0.003      0.808     0.196     0.316      0.596    class7
+                 0.6       0.007      0.643     0.6       0.621      0.797    class8
+                 0.982     0.005      0.979     0.982     0.98       0.989    class9
+Weighted Avg.    0.805     0.036      0.81      0.805     0.792      0.885
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   <-- classified as
+  17   0   0   5   2   0   0   2   2 |   a = class1
+   0 138   0   5   4   1   0   0   0 |   b = class2
+   0   0 297   1  11  10   0   1   1 |   c = class3
+   6   3   1  75  16  11   2   6   2 |   d = class4
+   0   1  13   9 107  43   1   1   1 |   e = class5
+   0   0   4   6  24 289   2   0   0 |   f = class6
+   0   2   9   3  26  46  21   0   0 |   g = class7
+   2   0   1   9   0   0   0  18   0 |   h = class8
+   1   1   2   1   0   0   0   0 275 |   i = class9
+
