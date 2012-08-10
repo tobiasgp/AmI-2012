@@ -23,34 +23,34 @@
 \authorrunning{Enhancing Accelerometer-based Activity Recognition with Proximity Sensing}
 
 % the name(s) of the author(s) follow(s) next
-% \author{Tobias Grosse-Puppendahl\inst{1} \and Eugen Berlin\inst{2} \and Marko Borazio\inst{2} }
-\author{Author 1 \and Author 2 \and Author 3 }
+\author{Tobias Grosse-Puppendahl\inst{1} \and Eugen Berlin\inst{2} \and Marko Borazio\inst{2} }
+%\author{Author 1 \and Author 2 \and Author 3 }
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-% \institute{
-% 	Fraunhofer IGD, Fraunhoferstr. 5, 64283 Darmstadt, Germany\\
-% 	\email{tobias.grosse-puppendahl@igd.fraunhofer.de}
-% 	\and
-% 	Technische Universit\"at Darmstadt, Hochschulstr. 10, 64289 Darmstadt, Germany\\
-% 	\email{\{berlin,borazio\}@ess.tu-darmstadt.de}
-% }
-
 \institute{
-	Anonymized for review \\
-	\email{anonymous@insitution.edu}
-	\and
-	Anonymized for review \\
-	\email{anonymous@insitution.edu}
+ 	Fraunhofer IGD, Fraunhoferstr. 5, 64283 Darmstadt, Germany\\
+ 	\email{tobias.grosse-puppendahl@igd.fraunhofer.de}
+ 	\and
+ 	Technische Universit\"at Darmstadt, Hochschulstr. 10, 64289 Darmstadt, Germany\\
+ 	\email{\{berlin,borazio\}@ess.tu-darmstadt.de}
 }
 
+%\institute{
+	%Anonymized for review \\
+	%\email{anonymous@insitution.edu}
+	%\and
+	%Anonymized for review \\
+	%\email{anonymous@insitution.edu}
+%}
 
-% \toctitle{Enhancing Accelerometer-based Activity Recognition with Capacitive Proximity Sensing}
-% \tocauthor{Eugen Berlin, Marko Borazio, Tobias Grosse-Puppendahl}
+
+\toctitle{Enhancing Accelerometer-based Activity Recognition with Capacitive Proximity Sensing}
+\tocauthor{Eugen Berlin, Marko Borazio, Tobias Grosse-Puppendahl}
 
 \maketitle
 \begin{abstract}
-Activity recognition with an accelerometer is a common investigated research topic and enables the detection of basic activities like sitting, walking or standing. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the user's environment to boost activity recognition. This work presents a sensor prototype consisting of an accelerometer and a capacitive proximity sensor that senses the user's activities based on the combined sensor values. We show that our proposed approach significantly improves the recognition rate for detecting activities of daily living (e.g. sitting, preparing dinner, eating, drinking, etc.) by adding capacitive proximity sensor data to the inertial data.
+Activity recognition with an accelerometer is a common investigated research topic and enables the detection of basic activities like sitting, walking or standing. Recent work in this area adds different sensing modalities to the inertial data to collect more information of the user's environment to boost activity recognition. This work presents a sensor prototype consisting of an accelerometer and a capacitive proximity sensor that senses the user's activities based on the combined sensor values. We show that our proposed approach of combining both modalities significantly improves the recognition rate for detecting activities of daily living.
 \keywords{activity recognition, capacitive proximity sensors, ambient assisted living, user context}
 \end{abstract}
 
@@ -60,8 +60,7 @@ Persons affected from physical and mental restrictions and their care givers can
 
 Sensing a person's activity is an active research topic with a raising interest due to the advancement in mobile phone technology. These devices include multiple sensors and therefore enable the recognition of daily activities \cite{brezmes2009activity}. Current wearable activity recognition systems are able to unobtrusively capture and recognize a person's activities throughout the whole day. These systems often rely on inertial sensor data that is captured by wearable sensors embedded in a mobile device \cite{brezmes2009activity} or attached to the body \cite{Ravi2005}. Usually, single sensor modalities are used or duplicated to detect the activities. However, it is a great challenge to identify fine-grained activities just by using a single modality like the accelerometer.
 
-Capacitive proximity sensors on the other hand can indirectly measure the distance and nature of a grounded object within reach. This means that the measurement result depends on the object's distance, its size and the material it is made of. In this work, we show that an accelerometer and a capacitive proximity sensor can be used to improve activity recognition in activities of daily living.
-We obtained an open-hardware and open-source wrist-worn activity data logger \cite{hedgehog} and integrated a capacitive proximity sensor invisibly into the wristband. 
+Capacitive proximity sensors on the other hand can indirectly measure the distance and nature of a grounded object within reach. This means that the measurement result depends on the object's distance, its size and the material it is made of. In this work, we show that an accelerometer and a capacitive proximity sensor can be used to improve activity recognition in activities of daily living. Therefore, we obtained an open-hardware and open-source wrist-worn activity data logger \cite{hedgehog} and integrated a capacitive proximity sensor invisibly into the wristband. 
 
 There are several intuitive examples for which a combination of accelerometer-based activity recognition with a capacitive proximity sensor reveals its strength. For example, it may be conducted which material is placed underneath the wristband. The capacitive proximity sensor would return a different measurement result for a hand placed on a couch covered with fabric than a hand placed a wooden table. Moreover, the approximate distance from the wristband to objects can be exploited to identify activities like grasping into a locker or a refrigerator to prepare food.
 
@@ -88,11 +87,11 @@ Our approach to enhance the inertial data from a wearable sensor is comparable t
 	\label{fig:modes}
 \end{figure}
 
-In the field of capacitive proximity sensing, three different measurement modes (shown in Figure \ref{fig:modes}) were identified by Smith et al. \cite{Smith1999}: transmit mode, shunt mode and loading mode. Transmit mode is based on a varying electric potential coupled to an object that can be measured by a capacitive proximity sensor next to that object. Shunt mode applies two electrodes, a transmit and a receive electrode, that can measure capacitance changes produced by objects disturbing the electric field between the two electrodes. In loading mode, a single electrode builds up an electric field to any grounded object in the environment. By measuring the capacitance, conclusions can be made upon the proximity and nature of an object. In our work we apply loading mode since it requires only a single electrode that can be integrated invisibly into the wristband.
+In the field of capacitive proximity sensing, three different measurement modes (shown in Figure \ref{fig:modes}) were identified by Smith et al. \cite{Smith1999}: transmit mode, shunt mode and loading mode. Transmit mode is based on a varying electric potential coupled to an object that can be measured by a capacitive proximity sensor next to that object. Shunt mode applies two electrodes, a transmit and a receive electrode, that can measure capacitance changes produced by objects disturbing the electric field between the two electrodes. In loading mode, a single electrode builds up an electric field to any grounded object in the environment. By measuring the capacitance, conclusions can be made upon the proximity and nature of an object. In our work we apply loading mode since it requires only a single electrode that can be integrated invisibly into the wristband. 
 
-A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{Wimmer2007} who presented a toolkit for capacitive proximity sensing.
+Capacitive proximity sensing faces the great advantage of being robust against changing lighting conditions and occlusion. Moreover, sensing electrodes can be integrated invisibly into the environment. On the other hand, the exact distance to objects can only be approximated since the object's surface, its conductivity and grounding has influence on the measurement result. A single sensor will thus deliver data that has a certain degree of ambiguity. Due to the nature of capacitive proximity sensors, they can be prone to errors in environments with strong and rapidly changing electric fields. This, however, is usually not an issue when considering activities of daily living. 
 
-In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
+A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{Wimmer2007} who presented a toolkit for capacitive proximity sensing. In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
 
 \section{Hardware}
 \label{sect:hardware}
@@ -196,7 +195,7 @@ The classifier was trained with basic features that were extracted from a slidin
 
 In the following, the performed activities will be analyzed in detail, stating out the influence of the capacitive proximity sensor on the classification result. In general, the usage of data provided by the new modality showed improvements in recognition rates reaching from 2.4 up to 10.7\% for a single activity.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/tobias_1.pdf}
 	\caption{When the participants entered the apartment, the wristband approached the door knob twice, at the time of opening and closing the door. This fact can be observed in the capacitive proximity data (upper plot) at the beginning and at the end of the activity, whereas the acceleration has no characteristic information (bottom plot).}
@@ -226,7 +225,7 @@ In the following, the participant were instructed to lie  down on the couch. Aga
 After that, the participants were asked to walk over to the kitchen and to put food and dishes from a shelf and a locker on the table. This activity involved direct interactions with various objects as well as proximity to furniture in the room (see Table \ref{tab:activities}). The capacitive proximity sensor was able to capture the proximity to the shelf and to the table. The average F-measure for this activity is rather low, but improved by 6.8\% from 53.8\% to 60.6\%. 
 The worst performing participants for this activity reached an F-measure of 46.8\% without and 53.5\% with the capacitive sensor, while the best performing one reached 62.0\% and 64.5\% respectively. The low performance results from confusions with other activities, with a higher tendency to the ``prepare bread'' activity across all participants. This is most likely due to various objects involved in both activities. The capacitive sensor modality has a much more positive impact reducing the confusion with other activities.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/eugen_5.pdf}
 	\caption{An example of the ``preparing bread'' activity, where the participants had to put marmalade on a slice of bread. The proximity sensor indicates the closeness to the table, while the acceleration sensor shows recurring hand motions.}
@@ -321,10 +320,7 @@ Capacitive proximity sensors represent a suitable new input modality for future 
 
 \section*{Acknowledgments}
 
-Anonymized for review.
-
-% We would like to thank our evaluation participants from TU Darmstadt and Fraunhofer IGD.
-
+We would like to thank our evaluation participants from TU Darmstadt and Fraunhofer IGD.
 
 \bibliographystyle{splncs03}
 \bibliography{references}
