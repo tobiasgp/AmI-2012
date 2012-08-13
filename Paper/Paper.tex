@@ -29,10 +29,10 @@
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 \institute{
- 	Fraunhofer IGD, Fraunhoferstr. 5, 64283 Darmstadt, Germany\\
+ 	Fraunhofer IGD, Darmstadt, Germany\\
  	\email{tobias.grosse-puppendahl@igd.fraunhofer.de}
  	\and
- 	Technische Universit\"at Darmstadt, Hochschulstr. 10, 64289 Darmstadt, Germany\\
+ 	Embedded Sensing Systems Group, Technische Universit\"at Darmstadt, Germany\\
  	\email{\{berlin,borazio\}@ess.tu-darmstadt.de}
 }
 
@@ -91,7 +91,8 @@ In the field of capacitive proximity sensing, three different measurement modes 
 
 Capacitive proximity sensing faces the great advantage of being robust against changing lighting conditions and occlusion. Moreover, sensing electrodes can be integrated invisibly into the environment. On the other hand, the exact distance to objects can only be approximated since the object's surface, its conductivity and grounding has influence on the measurement result. A single sensor will thus deliver data that has a certain degree of ambiguity. Due to the nature of capacitive proximity sensors, they can be prone to errors in environments with strong and rapidly changing electric fields. This, however, is usually not an issue when considering activities of daily living. 
 
-A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{Wimmer2007} who presented a toolkit for capacitive proximity sensing. In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
+A great variety of capacitive sensors and measurement techniques exists \cite{Smith1999}. The most common sensing principle, the loading mode, is based on running numerous charge and discharge cycles of the virtual capacitor that is created by the electrode and the environment. Depending on the charge and discharge times, one can infer the corresponding capacitance. This sensing principle is applied by Wimmer et al. in \cite{Wimmer2007} who presented a toolkit for capacitive proximity sensing. In previous works, capacitive proximity sensors were applied in various fields of human-computer-interaction. Wimmer et al. and Grosse-Puppendahl et al. presented gesture recognition systems \cite{Wimmer,Grosse-puppendahl2012} as well as smart furniture that can sense human activities \cite{Wimmer} and classify human postures \cite{Grosse-puppendahl2011}. Cheng et al. have investigated the possibility of using capacitive sensors for activity recognition by measuring shape changes of muscles and skin \cite{Cheng2010}. 
+To our knowledge, capacitive proximity sensors have not been embedded into a wearable device to enhance the performance of activity recognition.
 
 \section{Hardware}
 \label{sect:hardware}
@@ -215,7 +216,7 @@ After closing the door, the participants were supposed to sit down on the couch.
 
 In the following, the participant were instructed to lie  down on the couch. Again, there were great variations in how this activity was performed by the participants. For example, some of them crossed their hands under their head, or placed them on their body. For this class, the average F-measure could only be increased by 2.4\%, from 81.2 to 83.6\%. Considering some participants, the activity was often confused with the ``making bread'' class. By using the proximity modality, the confusion between the two classes could be reduced.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/tobias_4.pdf}
 	\caption{An example of the ``getting things'' activity, where the participants had to get food and dishes from shelves and lockers. The proximity sensor peaks in the beginning (9s and 19s) indicate immediate proximity to shelf, and to the locker (55-63s) in the kitchen (upper plot). The signal drop at the end results from the participant placing his hand on the table when she was finished.}
@@ -270,7 +271,7 @@ Regarding the walking activity one can identify periodic changes in the accelera
 
 The sleeping activity (an example shown in Figure \ref{fig:sleeping}) was classified with an average F-measure of 83.2\%, which increased to 86.9\% when using the proximity data. In this case, the capacitive proximity sensor is able to capture the surrounding cushions and blankets, as well as the body or head of the participant. The accelerometer data and the proximity data has larger periods with a constant signal, which is a cause for confusion with the ``lying on the couch'' activity.
 
-\begin{figure}
+\begin{figure}[t]
 	\setlength{\tabcolsep}{2pt}
 	\centering
 	\begin{scriptsize}
