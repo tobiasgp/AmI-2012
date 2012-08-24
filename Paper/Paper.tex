@@ -114,15 +114,12 @@ The HedgeHog sensor \cite{hedgehog} is a custom designed wearable data logger ai
 
 The sensor node itself is built around the low-power Microchip microcontroller (PIC18F46J50) featuring an accelerometer sensor (ADXL345) to capture human motion, light and ambient temperature sensors and a microSD flash card for locally storing the sensor data. The sensor is powered by a $200mAh$ lithium polymer battery, which allows for two weeks of continuous recording on a single battery charge. A USB port is used to configure the sensor (e.g. setting the sensitivity of the accelerometer), to access the stored sensor data, and to recharge the battery. A plastic case packages and protects the sensor to be worn at the wrist (Figure \ref{fig:sensornode}).
 
-
 The 3D accelerometer sensor is being sampled at 100Hz, resulting in 10ms equidistant measurements. For efficiency reasons, the sensor data is run-length encoded before being stored locally to the microSD card. 
 The HedgeHog can be extended with further sensors tailoring different application scenarios. For our scenario, we have added a capacitive proximity sensor that is described in detail in the next section.
 
 
 
 \subsection{Capacitive Proximity Sensor}
-
-
 
 A wrist-worn capacitive proximity sensor requires a shield that eliminates the influence of the grounded arm directly underneath the sensor. Using this setup, we can detect the proximity to a grounded object in the environments for distances up to 20cm. Especially for mobile devices, it is required that the sensor draws a very small amount of power. Thus, other proximity sensing input modalities like ultrasound or optical measurements are not applicable for this type of mobile application.
 
@@ -222,10 +219,10 @@ After closing the door, the participants were supposed to sit down on the couch.
 
 In the following, the participants were instructed to lie  down on the couch. Again, there were great variations in how this activity was performed by the participants. For example, some of them crossed their hands under their head, or placed them on their body. For this class, the average F-measure could only be increased by 2.4\%, from 81.2 to 83.6\%. Considering some participants, the activity was often confused with the ``make sandwich'' class. By using the proximity modality, the confusion between the two classes could be reduced.
 
-\begin{figure}[!t]
+\begin{figure}[t]
 	\centering
 		\includegraphics[width=\textwidth]{../Auswertung/images/tobias_4.pdf}
-	\caption{An example of the ``getting things'' activity, where the participants had to get food and dishes from shelves and lockers. The proximity sensor peaks in the beginning (9s and 19s) indicate immediate proximity to shelf, and to the locker (55-63s) in the kitchen (upper plot). The signal drop at the end results from the participant placing his hand on the table when she was finished.}
+	\caption{An example of the ``get things'' activity, where the participants had to get food and dishes from shelves and lockers. The proximity sensor peaks in the beginning (9s and 19s) indicate immediate proximity to shelf, and to the locker (55-63s) in the kitchen (upper plot). The signal drop at the end results from the participant placing his hand on the table when she was finished.}
 	\label{fig:get_things}
 \end{figure}
 
@@ -271,11 +268,11 @@ Regarding the walking activity one can identify periodic changes in the accelera
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=1.00\textwidth]{../Auswertung/images/eugen_9.pdf}
-	\caption{During the sleeping activity the data from both sensors remains constant for large time spans. The capacitive sensor shows the coverage of the arm with either cushions, blankets or the proximity to the mattress, the head or body of the participant.}
+	\caption{During the sleeping activity the data from both sensors remains constant for large time spans. The capacitive sensor plot shows the coverage of the arm with either cushions, blankets or the proximity to the mattress, other parts of the bed, the head or body of the participant.}
 	\label{fig:sleeping}
 \end{figure}
 
-The sleeping activity (an example shown in Figure \ref{fig:sleeping}) was classified with an average F-measure of 83.2\%, which increased to 86.9\% when using the proximity data. In this case, the capacitive proximity sensor is able to capture the surrounding cushions and blankets, as well as the body or head of the participant. The accelerometer data and the proximity data have larger periods of low variance, which is a cause for confusion with the ``lying on the couch'' activity.
+The sleeping activity (an example shown in Figure \ref{fig:sleeping}) was classified with an average F-measure of 83.2\%, which increased to 86.9\% when using the proximity data. In this case, the capacitive proximity sensor is able to capture the surrounding cushions and blankets, as well as the body or head of the participant. The accelerometer data and the capacitive proximity data have larger periods of low variance, which is a cause for confusion with the ``lying on the couch'' activity.
 
 \begin{figure}[t]
 	\setlength{\tabcolsep}{1.7pt}
@@ -327,7 +324,7 @@ Capacitive proximity sensors represent a suitable new input modality for future 
 
 \section*{Acknowledgements}
 
-We would like to thank our evaluation participants from TU Darmstadt and Fraunhofer IGD.
+We would like to thank our evaluation participants from the Technische Universit\"at Darmstadt and Fraunhofer IGD.
 
 \bibliographystyle{splncs03}
 \bibliography{references}
