@@ -1,14 +1,3 @@
-@article{Muhlsteff2004a,
-author = {M\"{u}hlsteff, J and Such, O and Schmidt, R and Perkuhn, M and Reiter, H and Lauter, J and Thijs, J and M\"{u}sch, G and Harris, M},
-file = {:home/mb/Uni/documents/papers/Muhlsteff et al. - 2004 - Wearable approach for continuous ECG--and activity patient-monitoring.pdf:pdf},
-isbn = {0780384393},
-journal = {Complexity},
-keywords = {---personal health care,continuous monitoring,dry electrodes,wearable},
-pages = {2184--2187},
-title = {{Wearable approach for continuous ECG – and Activity Patient-Monitoring}},
-year = {2004}
-}
-
 @inproceedings{Borazio2012,
 author = {Borazio, Marko and {Van Laerhoven}, Kristof},
 booktitle = {Proceedings of the 2nd ACM SIGHIT symposium on International health informatics - IHI '12},
